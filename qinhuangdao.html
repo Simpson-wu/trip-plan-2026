@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>秦皇岛+坝上草原 · 替代方案（海·沙·动物·草原）| 价格实查手册</title>
+<title>秦皇岛+坝上草原 · 8月版 vs 9月版 | 全实查方案手册</title>
 <style>
   :root{
     --ink:#1a2b23; --muted:#5c6f66; --line:#e3e9e5; --bg:#f6f8f6; --card:#ffffff;
@@ -35,18 +35,20 @@
   @media(max-width:920px){.cols{grid-template-columns:1fr}}
   .plan{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
   .plan-head{padding:18px 20px;border-bottom:1px solid var(--line)}
-  .plan-sea .plan-head{background:linear-gradient(135deg,#e8eff6,#f5f8fb)}
-  .plan-grass .plan-head{background:linear-gradient(135deg,#eaf5ef,#f7fbf9)}
+  .plan-aug .plan-head{background:linear-gradient(135deg,#eaf5ef,#f7fbf9)}
+  .plan-sep .plan-head{background:linear-gradient(135deg,#f9f1e4,#fcf8f1)}
   .plan-head h2{font-size:19px}
   .plan-head .sub{font-size:13px;color:var(--muted);margin-top:4px}
-  .plan-sea h2{color:var(--blue)} .plan-grass h2{color:var(--green)}
+  .plan-head .cost{margin-top:10px;font-size:14px}
+  .plan-head .cost b{font-size:18px}
+  .plan-aug .cost b{color:var(--green)} .plan-sep .cost b{color:var(--amber)}
 
   .timeline{padding:14px 20px 20px}
   .day{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
   .day:last-child{border-bottom:none}
   .dnum{text-align:center}
   .dnum .d{display:inline-block;min-width:40px;height:40px;line-height:40px;border-radius:20px;font-weight:700;font-size:13px;color:#fff;padding:0 4px}
-  .plan-sea .dnum .d{background:var(--blue)} .plan-grass .dnum .d{background:var(--green)}
+  .plan-aug .dnum .d{background:var(--green)} .plan-sep .dnum .d{background:var(--amber)}
   .dnum .date{font-size:11px;color:var(--muted);margin-top:3px}
   .dbody .title{font-weight:700;font-size:14.5px}
   .dbody .desc{font-size:13px;color:#37473f;margin-top:2px}
@@ -68,11 +70,14 @@
   .price{font-weight:700;color:var(--green);white-space:nowrap}
   .real{font-size:11px;background:var(--green-soft);color:var(--green);padding:1px 6px;border-radius:4px;white-space:nowrap}
   .est{font-size:11px;background:#eef0ef;color:var(--muted);padding:1px 6px;border-radius:4px;white-space:nowrap}
+  .m8{font-size:11px;background:var(--green-soft);color:var(--green);padding:1px 6px;border-radius:4px;white-space:nowrap}
+  .m9{font-size:11px;background:var(--amber-soft);color:var(--amber);padding:1px 6px;border-radius:4px;white-space:nowrap}
 
   .bars .row{display:grid;grid-template-columns:230px 1fr 130px;gap:10px;align-items:center;margin:9px 0;font-size:13px}
   @media(max-width:640px){.bars .row{grid-template-columns:140px 1fr 110px}}
-  .bar{height:16px;border-radius:5px;background:var(--blue-soft);position:relative;overflow:hidden}
-  .bar>i{position:absolute;left:0;top:0;bottom:0;border-radius:5px;background:var(--blue)}
+  .bar{height:16px;border-radius:5px;background:var(--green-soft);position:relative;overflow:hidden}
+  .bar>i{position:absolute;left:0;top:0;bottom:0;border-radius:5px;background:var(--green)}
+  .bars.a .bar>i{background:var(--amber)} .bars.a .bar{background:var(--amber-soft)}
   .bars .amt{text-align:right;font-weight:600;white-space:nowrap}
   .vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 
@@ -86,17 +91,15 @@
   .note a{color:var(--blue)}
   ul.tips{font-size:13.5px;padding-left:20px}
   ul.tips li{margin:7px 0}
-  .deadline{background:var(--red-soft);border:1px solid #e8c8c3;border-radius:14px;padding:16px 20px;margin-bottom:16px;font-size:14px}
-  .deadline b{color:var(--red)}
   footer{margin-top:40px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
   footer a{color:var(--blue)}
   @media(max-width:640px){
     .hero{min-height:240px}
     .hero-inner{padding:24px 18px}
-    .hero h1{font-size:23px}
+    .hero h1{font-size:22px}
     .hero p{font-size:13px}
     .kpi .v{font-size:17px}
-    .plan-head h2{font-size:17px}
+    .plan-head h2{font-size:16px}
     .day{grid-template-columns:52px 1fr;gap:8px}
     .dnum .d{min-width:34px;height:34px;line-height:34px;font-size:12px}
     table{font-size:12px}
@@ -109,13 +112,13 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <h1>🌊 秦皇岛 + 坝上草原 · 替代方案</h1>
-    <p>赶海 · 滑沙 · 海洋王国 · 野生动物园 · 骑马喂羊 —— 海沙动物草原四合一 ｜ 与伊春定稿两案平行的备选，时间框架同 Plan B</p>
+    <h1>🌊 秦皇岛 + 坝上草原 · 8月版 vs 9月版</h1>
+    <p>赶海 · 滑沙 · 海洋王国 · 野生动物园 · 骑马喂羊 —— 海沙动物草原四合一 ｜ 与伊春两案平行的备选目的地，机票/火车/酒店全实查</p>
     <div class="chips">
       <span class="chip">机票/火车：2026-07-11 携程按出行日期实查</span>
-      <span class="chip">酒店：旺季行情估算（入选后实查）</span>
-      <span class="chip">妈妈+孩子 8/14 先回咸宁 · 8/22 天津会合 · 8/30 回深圳</span>
-      <span class="chip">85,000里程基本不动</span>
+      <span class="chip">酒店：Trip.com 按实际入住日期实查（2大1小）</span>
+      <span class="chip">8月版=先咸宁框架 · 9月版=深圳往返蹭中秋</span>
+      <span class="chip">85,000里程两版都不动</span>
     </div>
   </div>
 </div>
@@ -123,153 +126,229 @@
 <div class="wrap">
 
 <div class="kpis">
-  <div class="kpi"><div class="t">本方案总预算</div><div class="v">现金≈1.65–1.85万</div><div class="s">里程几乎不动（兑爸爸深天一段则≈1.56–1.76万+15,000分）</div></div>
-  <div class="kpi"><div class="t">对比：伊春 Plan B</div><div class="v">≈1.51–1.65万+60k分</div><div class="s">全现金口径伊春要≈2.1万——纯现金比，秦皇岛版更便宜</div></div>
-  <div class="kpi"><div class="t">主题覆盖</div><div class="v">海+沙+动物+草原</div><div class="s">最初想要的组合一次凑齐</div></div>
-  <div class="kpi hot"><div class="t">最大体验风险</div><div class="v">8月下旬北戴河人海</div><div class="s">鸽子窝/乐岛需开门即入错峰；伊春线则清净</div></div>
+  <div class="kpi"><div class="t">QHD-8月版（先咸宁后出发）</div><div class="v">现金≈1.54–1.84万</div><div class="s">里程不动（可选兑爸爸段15,000分省¥860）· 玩点全开</div></div>
+  <div class="kpi"><div class="t">QHD-9月版（深圳往返·中秋）</div><div class="v">现金≈1.26–1.41万</div><div class="s">零里程 · 只请4天假 · 金秋坝上+人海退潮</div></div>
+  <div class="kpi"><div class="t">北戴河酒店 8月 vs 9月</div><div class="v">约2-3倍</div><div class="s">夏至亲子¥575→¥158（实查同房型）</div></div>
+  <div class="kpi hot"><div class="t">与伊春方案的本质差别</div><div class="v">里程一分不用</div><div class="s">京深/津深现金¥590-900，兑换价值不足6分/里程</div></div>
 </div>
 
 <div class="cols">
 
-  <!-- 海·沙段 -->
-  <div class="plan plan-sea">
+  <!-- 8月版 -->
+  <div class="plan plan-aug">
     <div class="plan-head">
-      <h2>上半场 · 海与沙（北戴河—昌黎—山海关）</h2>
-      <div class="sub">8/14 母子回咸宁（零房费）→ 8/22 天津会合进北戴河 → 8/25 玩完海边取车</div>
+      <h2>QHD-8月版 · 先咸宁后秦皇岛（自驾）</h2>
+      <div class="sub">母子8/14高铁回咸宁 → 8/22天津会合 → 海3天+沙1天+草原3天 → 8/30北京飞回深圳</div>
+      <div class="cost">一家三口 <b>现金≈15,400–18,400元 · 里程不动</b>（兑爸爸深天段则≈1.45–1.75万+15,000分）</div>
     </div>
     <div class="timeline">
       <div class="day"><div class="dnum"><span class="d">前置</span><div class="date">8/14 五</div></div>
-        <div class="dbody"><div class="title">妈妈+孩子：深圳北 → 咸宁北，居家住到8/22 <span class="tag move">高铁4.5h</span><span class="tag home">零房费</span></div>
-        <div class="desc">二等座 ¥538.5/成人（实查）+ 儿童约半价；爸爸留深上班一周</div></div></div>
+        <div class="dbody"><div class="title">妈妈+孩子：深圳北→咸宁北，住到8/22 <span class="tag move">高铁4.5h</span><span class="tag home">零房费</span></div>
+        <div class="desc">二等¥538.5/成人（实查）+儿童约半价；爸爸留深上班一周</div></div></div>
       <div class="day"><div class="dnum"><span class="d">D1</span><div class="date">8/22 六</div></div>
-        <div class="dbody"><div class="title">天津会合日 → 高铁进北戴河 <span class="tag move">双线飞+高铁1.5h</span></div>
-        <div class="desc">母子：武汉✈天津 MU2483 07:55→09:55（<b>¥400×2实查</b>）；爸爸：深圳✈天津 CZ5819 09:40→13:00（<b>¥910实查</b>，可兑15,000里程，价值6.1分/里程可兑可不兑）；机场地铁→天津站→高铁1.5h（二等¥115-122，买不到北戴河站就买秦皇岛站，班次更多）</div>
-        <div class="stay">宿：北戴河（旺季估¥400–700 <span class="est">待核实</span>）</div></div></div>
+        <div class="dbody"><div class="title">天津会合 → 高铁进北戴河 <span class="tag move">双线飞+高铁1.5h</span></div>
+        <div class="desc">母子MU2483 07:55→09:55（<b>¥400×2实查</b>）；爸爸CZ5819 09:40→13:00（<b>¥910实查</b>，可兑15,000里程）；天津站高铁二等¥115-122</div>
+        <div class="stay">宿：<em>夏至·亲子度假村¥575（9.5泳池）/ 圣彼得¥357 / 如家精选¥227</em>（实查）</div></div></div>
       <div class="day"><div class="dnum"><span class="d">D2</span><div class="date">8/23 日</div></div>
         <div class="dbody"><div class="title">鸽子窝赶海 + 秦皇岛野生动物园 <span class="tag fun">赶海·喂羊驼长颈鹿</span></div>
-        <div class="desc">上午按潮汐表赶海（小桶小铲抓螃蟹小虾）→ 下午野生动物园（90元/人，小火车进猛兽区，两地相邻），早去动物活跃</div>
-        <div class="stay">宿：北戴河</div></div></div>
+        <div class="desc">按潮汐表赶海（小桶小铲）→ 下午动物园（90元/人，小火车进猛兽区，两地相邻）</div>
+        <div class="stay">宿：北戴河（连住）</div></div></div>
       <div class="day"><div class="dnum"><span class="d">D3</span><div class="date">8/24 一</div></div>
-        <div class="dbody"><div class="title">昌黎黄金海岸：国际滑沙中心 +（选）金沙湾沙雕水城 <span class="tag fun">滑沙·戏水</span><span class="tag move">40min</span></div>
-        <div class="desc">滑沙中心80元/人（儿童50）：索道上山、滑沙滑草不限次+儿童乐园；体力富余隔壁金沙湾"宝贝水城"（约75元）。⚠️ 翡翠岛有停业标注，已用滑沙中心替代</div>
-        <div class="stay">宿：北戴河/黄金海岸</div></div></div>
+        <div class="dbody"><div class="title">昌黎：国际滑沙中心 + 金沙湾宝贝水城 <span class="tag fun">滑沙·戏水</span><span class="tag move">40min</span></div>
+        <div class="desc">滑沙80元/人（儿童50）不限次含儿童乐园；⚠️翡翠岛有停业标注，已用滑沙中心替代（已确认）</div>
+        <div class="stay">宿：北戴河（连住）</div></div></div>
       <div class="day"><div class="dnum"><span class="d">D4</span><div class="date">8/25 二</div></div>
-        <div class="dbody"><div class="title">山海关：乐岛海洋王国 + 天下第一关/老龙头 <span class="tag fun">海豚白鲸·长城入海</span></div>
-        <div class="desc">乐岛165元/人（海洋馆+水世界+动物表演，玩大半天）→ 傍晚古城或老龙头；晚上取租车（一嗨，秦皇岛取·北京还，异地免还车费）</div>
-        <div class="stay">宿：北戴河</div></div></div>
+        <div class="dbody"><div class="title">山海关：乐岛海洋王国 + 老龙头 <span class="tag fun">海豚白鲸·水世界</span></div>
+        <div class="desc">乐岛165元/人玩大半天（8月水世界全开）→ 傍晚老龙头长城入海；晚取租车（一嗨，北京还免异地费）</div>
+        <div class="stay">宿：北戴河（连住4晚）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D5</span><div class="date">8/26 三</div></div>
+        <div class="dbody"><div class="title">自驾→承德，下午避暑山庄 <span class="tag move">280km·3.5h午睡时段</span></div>
+        <div class="desc">避暑山庄约130元/人，湖区坐船</div>
+        <div class="stay">宿：<em>希尔顿欢朋¥526（9.8）/ 环宇假日¥222</em>（均含早，实查）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D6</span><div class="date">8/27 四</div></div>
+        <div class="dbody"><div class="title">上坝：骑马、喂羊、滑草 <span class="tag fun">羊和牛管够</span><span class="tag move">150km·2h</span></div>
+        <div class="desc">丰宁大滩镇（中国马镇度假区就在镇上，可看马术表演）；骑马约100-200元/次</div>
+        <div class="stay">宿：<em>星云谷民宿¥329 / 云朵亲子三人间¥418</em>（均含早，实查）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D7</span><div class="date">8/28 五</div></div>
+        <div class="dbody"><div class="title">坝上全天 + 篝火烤全羊 <span class="tag fun">草原深度日</span></div>
+        <div class="desc">大汗行宫/闪电湖；晚上篝火烤全羊</div>
+        <div class="stay">宿：大滩（连住2晚）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D8</span><div class="date">8/29 六</div></div>
+        <div class="dbody"><div class="title">大滩→北京，还车 <span class="tag move">280km·4h午睡时段</span></div>
+        <div class="desc">还车后傍晚前门大街</div>
+        <div class="stay">宿：<em>CitiGO欢阁·前门¥494 / 东禾家庭房¥468</em>（实查）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D9</span><div class="date">8/30 日</div></div>
+        <div class="dbody"><div class="title">✈ 回深圳 <span class="tag move">京深3.5h</span></div>
+        <div class="desc">南航CZ3194 大兴08:00 <b>¥740</b>（剩1张）/ CZ3156 09:00 <b>¥900</b> / 午后档¥1,000-1,100（实查）；兑里程仅值4.9-6分，现金买</div></div></div>
     </div>
   </div>
 
-  <!-- 草原段 -->
-  <div class="plan plan-grass">
+  <!-- 9月版 -->
+  <div class="plan plan-sep">
     <div class="plan-head">
-      <h2>下半场 · 草原（承德—坝上—北京）</h2>
-      <div class="sub">8/25晚取车 → 承德避暑山庄 → 坝上两晚骑马喂羊 → 北京还车 8/30 飞回深圳</div>
+      <h2>QHD-9月版 · 深圳往返·金秋坝上（自驾）</h2>
+      <div class="sub">9/19–9/26 · 8天7晚 · 中秋只请9/21-24四天假 · 北戴河人海退潮 · 坝上白桦金黄</div>
+      <div class="cost">一家三口 <b>现金≈12,600–14,100元 · 零里程</b>（酒店全实查口径）</div>
     </div>
     <div class="timeline">
-      <div class="day"><div class="dnum"><span class="d">D5</span><div class="date">8/26 三</div></div>
-        <div class="dbody"><div class="title">自驾 → 承德，下午避暑山庄 <span class="tag move">280km·3.5h</span></div>
-        <div class="desc">赶路安排在孩子午睡时段；避暑山庄约130元/人，湖区坐船轻松走</div>
-        <div class="stay">宿：承德（估¥300–400 <span class="est">待核实</span>）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D6</span><div class="date">8/27 四</div></div>
-        <div class="dbody"><div class="title">上坝：骑马、喂羊、滑草 <span class="tag fun">羊和牛管够</span><span class="tag move">2h</span></div>
-        <div class="desc"><b>推荐丰宁坝上大滩镇</b>（承德过去约150km 2h，带娃车程友好）；备选乌兰布统（3h，景更开阔+景区门票120元/人，全程多约3小时车）</div>
-        <div class="stay">宿：坝上（估¥350–500 <span class="est">待核实</span>）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D7</span><div class="date">8/28 五</div></div>
-        <div class="dbody"><div class="title">坝上全天 + 篝火烤全羊 <span class="tag fun">草原深度日</span></div>
-        <div class="desc">丰宁：大汗行宫/闪电湖；乌兰布统：公主湖、将军泡子；骑马项目约100–200元/次，晚上篝火烤全羊</div>
-        <div class="stay">宿：坝上（连住2晚）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D8</span><div class="date">8/29 六</div></div>
-        <div class="dbody"><div class="title">坝上 → 北京，还车 <span class="tag move">丰宁280km·4h / 乌兰布统450km·5.5h</span></div>
-        <div class="desc">午睡时段赶路；北京还车后傍晚前门/王府井轻松逛</div>
-        <div class="stay">宿：北京（估¥400–500 <span class="est">待核实</span>）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D9</span><div class="date">8/30 日</div></div>
-        <div class="dbody"><div class="title">✈ 回深圳（京深大线，现金买最划算）<span class="tag move">直飞3.5h</span></div>
-        <div class="desc">南航 CZ3194 大兴08:00→11:20 <b>¥740</b>（剩1张）/ CZ3156 09:00 <b>¥900</b> / 深航ZH9114 首都07:55 ¥750；午后班约¥1,000–1,100。<b>兑里程只值4.9–6分/里程，不建议兑</b>——85,000分留账户</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D1</span><div class="date">9/19 六</div></div>
+        <div class="dbody"><div class="title">全家深圳→天津→北戴河 <span class="tag move">CZ5819直飞+高铁1.5h</span></div>
+        <div class="desc">CZ5819 09:40→13:00（<b>¥590×3实查</b>，2.8折剩3张）；天津站高铁二等¥115-122</div>
+        <div class="stay">宿：<em>谷雨海景·鸽子窝¥121（9.5）/ 夏至亲子¥158 / 信源逅海¥196</em>（实查）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D2</span><div class="date">9/20 日</div></div>
+        <div class="dbody"><div class="title">鸽子窝赶海 + 野生动物园 <span class="tag fun">赶海·喂羊驼长颈鹿</span></div>
+        <div class="desc">9月人少，动物园不用排队；海水偏凉只赶海不下水</div>
+        <div class="stay">宿：北戴河（连住）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D3</span><div class="date">9/21 一</div></div>
+        <div class="dbody"><div class="title">昌黎：国际滑沙中心 + 金沙湾 <span class="tag fun">滑沙</span></div>
+        <div class="desc">滑沙全年开（8:00-17:30）；金沙湾沙雕仍开、戏水区看运营（行前电话确认）</div>
+        <div class="stay">宿：北戴河（连住3晚）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D4</span><div class="date">9/22 二</div></div>
+        <div class="dbody"><div class="title">上午老龙头 → 自驾→承德 <span class="tag move">280km·3.5h</span></div>
+        <div class="desc">长城入海处1.5小时；乐岛9月下旬水世界收官，本版砍掉；午睡时段赶路</div>
+        <div class="stay">宿：<em>环宇假日¥153 / 欢朋¥303</em>（均含早，实查）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D5</span><div class="date">9/23 三</div></div>
+        <div class="dbody"><div class="title">上午避暑山庄 → 上坝 <span class="tag fun">湖区坐船</span><span class="tag move">150km·2h</span></div>
+        <div class="desc">傍晚草原日落第一场</div>
+        <div class="stay">宿：<em>云朵亲子三人间¥197 / 天马酒店¥356</em>（实查）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D6</span><div class="date">9/24 四</div></div>
+        <div class="dbody"><div class="title">坝上金秋全天：骑马、喂羊、白桦林 <span class="tag fun">草原版"五花山"</span></div>
+        <div class="desc">9月下旬是坝上颜值最高窗口（白桦金黄+草原转黄）；晚上篝火烤全羊；早晚接近0℃备抓绒</div>
+        <div class="stay">宿：大滩（连住2晚）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D7</span><div class="date">9/25 五·中秋</div></div>
+        <div class="dbody"><div class="title">大滩→北京还车，中秋夜前门 <span class="tag move">280km·4h</span></div>
+        <div class="desc">午睡时段赶路；晚上前门大街/天安门广场过中秋</div>
+        <div class="stay">宿：<em>东禾家庭房¥513 / CitiGO¥596</em>（中秋实查）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D8</span><div class="date">9/26 六</div></div>
+        <div class="dbody"><div class="title">上午天安门广场/大栅栏 → ✈ 回深圳 <span class="tag move">MU 15:05→18:30</span></div>
+        <div class="desc">东航多班 <b>¥900×3</b>（3折实查）；<b>当日无南航直飞（实查）</b>，里程免谈，晚饭前到家</div></div></div>
     </div>
   </div>
 </div>
 
 <section>
-  <h3>⚖️ 与伊春 Plan B 摆在一起看（同一时间框架：8/14咸宁 · 8/22会合 · 8/30回深）</h3>
+  <h3>🏨 酒店全实查（Trip.com 2026-07-11 · 2大1小1间房 · 按实际入住日期）</h3>
   <div class="card" style="overflow-x:auto">
     <table>
-      <tr><th>维度</th><th>伊春 Plan B（8月环线）</th><th>秦皇岛+坝上（本方案）</th></tr>
-      <tr><td>总花费</td><td>现金≈1.51–1.65万 + <b>用掉60,000里程</b></td><td>现金≈1.65–1.85万 + <b>里程几乎不动</b>（85,000分留账户）</td></tr>
-      <tr><td>等效全现金口径</td><td>≈2.1万（不用里程时）</td><td><b>≈1.65–1.85万——纯现金比更便宜</b></td></tr>
-      <tr><td>主题</td><td>森林+火山+丹顶鹤，22℃避暑</td><td><b>海+沙+动物+草原四合一</b>（最初想要的组合）</td></tr>
-      <tr><td>孩子玩点</td><td>喂虎喂鹿喂松鼠、恐龙、游船、丹顶鹤放飞</td><td>赶海、滑沙、海洋王国、野生动物园、<b>骑马喂羊</b></td></tr>
-      <tr><td>气温体感</td><td>20–28℃全程凉爽</td><td>北戴河28–31℃有暑气，坝上15–25℃凉</td></tr>
-      <tr><td>人流</td><td>小众清净</td><td><b>北戴河8月是全国级人海</b>，各景点须开门即入</td></tr>
-      <tr><td>交通衔接</td><td>会合哈尔滨；EU支线90座紧俏</td><td>会合天津；京津冀班次海量、无紧俏段</td></tr>
-      <tr><td>新鲜感</td><td>全家没去过的大兴安岭系</td><td>海边与深圳重合度高，增量在滑沙和草原</td></tr>
-      <tr><td>车程</td><td>环线约1,100km，一个330km日</td><td>约1,000km，两个赶路日（3.5h+4h）</td></tr>
+      <tr><th>城市</th><th>入住</th><th>亲子/品质档</th><th>舒适/经济档</th></tr>
+      <tr><td rowspan="2">北戴河<br>（老虎石/鸽子窝）</td><td><span class="m8">8/22</span></td><td>海洋之城·爱尚亲子海景（9.4，儿童乐园）<b>¥589</b>｜夏至·亲子度假村（9.5，泳池）<b>¥575</b>｜信源·逅海（4星第4）¥762</td><td>圣彼得¥357｜古联秦（9.7）¥392｜棠·设计师¥318｜<b>如家精选（9.9新店）¥227</b></td></tr>
+      <tr><td><span class="m9">9/19</span></td><td>夏至·亲子 <b>¥158</b>｜信源·逅海 <b>¥196</b>｜遇见海美墅家庭房含早¥640</td><td>谷雨海景·鸽子窝（9.5，3654评）<b>¥121</b>｜棠·设计师¥74｜如家精选¥176 —— <b style="color:var(--red)">约为8月的1/3</b></td></tr>
+      <tr><td rowspan="2">承德<br>（避暑山庄旁）</td><td><span class="m8">8/26</span></td><td>希尔顿欢朋含早（9.8，5785评）<b>¥526</b>｜亚朵·火神庙¥393</td><td>环宇假日含早 <b>¥222</b>｜你好酒店¥289｜天泰¥127</td></tr>
+      <tr><td><span class="m9">9/22</span></td><td>欢朋含早 <b>¥303</b>｜兆丰假日（4星第3）含早¥360</td><td>环宇假日含早 <b>¥153</b>｜冠榕假日含早¥175｜你好¥186</td></tr>
+      <tr><td rowspan="2">丰宁大滩<br>（中国马镇）</td><td><span class="m8">8/27</span></td><td>星云谷民宿含早（9.5）<b>¥329</b>｜西滩小镇（"适合与小孩同行"）含早¥487｜云朵亲子三人间含早 <b>¥418</b></td><td>有家小院含早（9.9）¥260｜春华庄园含早¥127｜德利庄园¥130</td></tr>
+      <tr><td><span class="m9">9/23</span></td><td>星云谷¥329｜天马酒店（4星第2）含早 <b>¥356</b></td><td>云朵亲子三人间 <b>¥197</b>｜丁家小院¥207｜春华家庭四人间含早¥153</td></tr>
+      <tr><td rowspan="2">北京<br>（前门大街）</td><td><span class="m8">8/29</span></td><td>CitiGO欢阁（9.5，5959评）<b>¥494</b>｜秋果升旗亲子房（上下铺）¥659</td><td>东禾家庭房 <b>¥468</b>｜锦绣庄四合院¥475</td></tr>
+      <tr><td><span class="m9">9/25中秋</span></td><td>CitiGO ¥596｜桔子水晶·天坛¥596</td><td>东禾家庭房 <b>¥513</b>｜大方瑞廷（9.6）¥465 —— 中秋略涨</td></tr>
     </table>
-    <div class="note"><b>一句话：</b>想一次凑齐海沙草原动物、并把85,000里程留着以后用 → 选本方案；想要凉爽清净、动物互动密度最高、里程花在9分+的刀刃上 → 选伊春Plan B。北戴河的人流是本方案最大的体验风险。</div>
+    <div class="note">全部为2026-07-11可下单价（多数免费取消）；北戴河/北京推荐档为家庭房或亲子房型。</div>
   </div>
 </section>
 
 <section>
-  <h3>💰 费用构成（一家三口，现金口径）</h3>
-  <div class="card">
-    <b style="color:var(--blue)">现金≈16,500–18,500元 · 里程基本不动</b>
-    <div class="bars" style="margin-top:8px">
-      <div class="row"><span>机票（武津×2+深津×1+京深×3）</span><div class="bar"><i style="width:100%"></i></div><span class="amt">≈4,800元</span></div>
-      <div class="row"><span>火车（咸宁往返段+津戴×3）</span><div class="bar"><i style="width:25%"></i></div><span class="amt">≈1,200元</span></div>
-      <div class="row"><span>租车5天+油费过路（秦皇岛取·北京还）</span><div class="bar"><i style="width:67%"></i></div><span class="amt">≈3,200元</span></div>
-      <div class="row"><span>北戴河段打车</span><div class="bar"><i style="width:8%"></i></div><span class="amt">≈400元</span></div>
-      <div class="row"><span>酒店8晚（北戴河4+承德1+坝上2+北京1）</span><div class="bar"><i style="width:80%"></i></div><span class="amt">≈3,850元（待核实）</span></div>
-      <div class="row"><span>门票+骑马滑草项目</span><div class="bar"><i style="width:44%"></i></div><span class="amt">≈2,100元</span></div>
-      <div class="row"><span>餐饮杂项（9天）</span><div class="bar"><i style="width:48%"></i></div><span class="amt">≈2,300元</span></div>
+  <h3>✈️ 机票/火车实查价（携程，2026-07-11，均按实际出行日期查询）</h3>
+  <div class="card" style="overflow-x:auto">
+    <table>
+      <tr><th>航段/车段</th><th>日期</th><th>班次·时刻</th><th>实查价</th><th>用于</th><th>口径</th></tr>
+      <tr><td>深圳北→咸宁北 高铁（母子）</td><td>8/14</td><td>G字头每日17班 · 约4.5h</td><td class="price">¥504.5–597（二等）</td><td><span class="m8">8月</span></td><td><span class="real">实查</span></td></tr>
+      <tr><td>武汉→天津（母子×2）</td><td><b>8/22</b></td><td>东航MU2483 · 07:55→09:55 直飞</td><td class="price">¥400</td><td><span class="m8">8月</span></td><td><span class="real">实查</span> 3.6折</td></tr>
+      <tr><td>深圳→天津（爸爸×1）</td><td><b>8/22</b></td><td>南航CZ5819 · 09:40→13:00 直飞</td><td class="price">¥910</td><td><span class="m8">8月</span></td><td><span class="real">实查</span> 可兑15,000里程（6.1分）</td></tr>
+      <tr><td>北京→深圳（全家×3）</td><td><b>8/30</b></td><td>南航CZ3194大兴08:00 ¥740 / CZ3156 09:00 ¥900 / 深航¥750</td><td class="price">¥740–900起</td><td><span class="m8">8月</span></td><td><span class="real">实查</span> 兑里程不值（4.9-6分）</td></tr>
+      <tr><td>深圳→天津（全家×3）</td><td><b>9/19</b></td><td>南航CZ5819 · 09:40→13:00 直飞</td><td class="price">¥590</td><td><span class="m9">9月</span></td><td><span class="real">实查</span> 2.8折剩3张；13:15班¥690</td></tr>
+      <tr><td>北京→深圳（全家×3）</td><td><b>9/26</b></td><td>东航MU 大兴09:00/15:05/17:15多班</td><td class="price">¥900</td><td><span class="m9">9月</span></td><td><span class="real">实查</span> 3折；<b>当日无南航直飞</b></td></tr>
+      <tr><td>天津→北戴河 高铁</td><td>两版</td><td>G字头多班 · 约1.5h</td><td class="price">二等¥115–122</td><td><span class="m8">8月</span><span class="m9">9月</span></td><td><span class="real">实查</span> 可改秦皇岛站班次更多</td></tr>
+      <tr><td>深圳→北戴河机场 直飞</td><td>—</td><td>—</td><td class="price">无直飞</td><td>—</td><td><span class="real">实查</span> 全为中转7h+，经天津进</td></tr>
+      <tr><td>武汉→北戴河 直达火车</td><td>—</td><td>直达0车次；直达秦皇岛G1278 7.5h ¥693.5</td><td class="price">弃用</td><td>—</td><td><span class="real">实查</span> 不如飞天津</td></tr>
+    </table>
+    <div class="note">已剔除廉航；夜车弃用。<b>里程结论：两版秦皇岛都基本不用85,000里程</b>——这是与伊春方案（用45,000–60,000分）的本质差别。玩点核实：<a href="http://qhd.bendibao.com/tour/zhuantiqinziyou/" target="_blank">秦皇岛本地宝</a> · <a href="https://gs.ctrip.com/html5/you/sight/qinhuangdao132/13486.html" target="_blank">野生动物园</a> · <a href="https://gs.ctrip.com/html5/you/sight/changli1835/140358.html" target="_blank">滑沙中心</a> · <a href="https://www.beidaihe186.com/hjhaian_jd_fcd15.php" target="_blank">翡翠岛停业标注</a>。</div>
+  </div>
+</section>
+
+<section>
+  <h3>💰 费用构成对比（一家三口，酒店按实查价计）</h3>
+  <div class="vs">
+    <div class="card">
+      <b style="color:var(--green)">QHD-8月版 现金≈15,400–18,400元 · 里程不动</b>
+      <div class="bars" style="margin-top:8px">
+        <div class="row"><span>机票（武津×2+深津×1+京深×3）</span><div class="bar"><i style="width:100%"></i></div><span class="amt">≈4,800元</span></div>
+        <div class="row"><span>火车（咸宁段+津戴×3）</span><div class="bar"><i style="width:25%"></i></div><span class="amt">≈1,200元</span></div>
+        <div class="row"><span>租车5天+油费过路</span><div class="bar"><i style="width:67%"></i></div><span class="amt">≈3,200元</span></div>
+        <div class="row"><span>北戴河段打车</span><div class="bar"><i style="width:8%"></i></div><span class="amt">≈400元</span></div>
+        <div class="row"><span>酒店8晚（实查：经济配2,100/亲子配3,600）</span><div class="bar"><i style="width:60%"></i></div><span class="amt">≈2,100–3,600元</span></div>
+        <div class="row"><span>门票+骑马项目</span><div class="bar"><i style="width:44%"></i></div><span class="amt">≈2,100元</span></div>
+        <div class="row"><span>餐饮杂项（9天）</span><div class="bar"><i style="width:48%"></i></div><span class="amt">≈2,300元</span></div>
+      </div>
     </div>
-    <div class="note">金额取区间中值；酒店为旺季行情估算，方案入选后按实际日期在携程/Trip.com实查替换。门票主项：野生动物园90、乐岛165、滑沙中心80（儿童50）、避暑山庄约130、鸽子窝/山海关小额、骑马100–200/次；孩子1.2米以下多免/半价。</div>
+    <div class="card">
+      <b style="color:var(--amber)">QHD-9月版 现金≈12,600–14,100元 · 零里程</b>
+      <div class="bars a" style="margin-top:8px">
+        <div class="row"><span>机票（深津×3+京深×3）</span><div class="bar"><i style="width:100%"></i></div><span class="amt">≈4,700元</span></div>
+        <div class="row"><span>火车（津戴×3）</span><div class="bar"><i style="width:7%"></i></div><span class="amt">≈300元</span></div>
+        <div class="row"><span>租车4天+油费过路</span><div class="bar"><i style="width:55%"></i></div><span class="amt">≈2,600元</span></div>
+        <div class="row"><span>北戴河段打车</span><div class="bar"><i style="width:7%"></i></div><span class="amt">≈300元</span></div>
+        <div class="row"><span>酒店7晚（实查¥1,500–2,300）</span><div class="bar"><i style="width:40%"></i></div><span class="amt">≈1,900元</span></div>
+        <div class="row"><span>门票+骑马（无乐岛）</span><div class="bar"><i style="width:38%"></i></div><span class="amt">≈1,800元</span></div>
+        <div class="row"><span>餐饮杂项（8天）</span><div class="bar"><i style="width:38%"></i></div><span class="amt">≈1,800元</span></div>
+      </div>
+    </div>
   </div>
+  <div class="note">条形长度按各自最大项比例绘制，金额取区间中值；租车/门票/餐饮为行情估算，其余全实查。门票主项：野生动物园90、乐岛165（仅8月版）、滑沙80（儿童50）、避暑山庄约130、骑马100–200/次；孩子1.2米以下多免/半价。</div>
 </section>
 
 <section>
-  <h3>✈️ 大交通实查价（携程，2026-07-11，均按实际出行日期查询）</h3>
+  <h3>⚖️ 四方案终极对照（伊春×2 + 秦皇岛×2）</h3>
   <div class="card" style="overflow-x:auto">
     <table>
-      <tr><th>航段/车段</th><th>日期</th><th>班次·时刻</th><th>实查价</th><th>口径</th></tr>
-      <tr><td>深圳北→咸宁北 高铁（母子）</td><td><b>8/14</b></td><td>G字头每日17班 · 约4.5h</td><td class="price">¥504.5–597（二等）</td><td><span class="real">实查</span> 与伊春Plan B同段</td></tr>
-      <tr><td>武汉→天津（母子×2）</td><td><b>8/22</b></td><td>东航MU2483 · 07:55→09:55 直飞</td><td class="price">¥400</td><td><span class="real">实查</span> 3.6折</td></tr>
-      <tr><td>深圳→天津（爸爸×1）</td><td><b>8/22</b></td><td>南航CZ5819 · 09:40→13:00 直飞</td><td class="price">¥910</td><td><span class="real">实查</span> 可兑15,000里程（6.1分/里程，可兑可不兑）</td></tr>
-      <tr><td>天津→北戴河 高铁</td><td>8/22</td><td>G字头多班 · 约1.5h</td><td class="price">二等¥115–122</td><td><span class="real">实查</span> 班次以12306为准，可改到秦皇岛站</td></tr>
-      <tr><td>北京→深圳（全家×3）</td><td><b>8/30</b></td><td>南航CZ3194大兴08:00 ¥740 / CZ3156 09:00 ¥900 / 深航ZH9114 ¥750</td><td class="price">¥740–900起</td><td><span class="real">实查</span> 午后档¥1,000–1,100；<b>不建议兑里程</b>（4.9–6分）</td></tr>
-      <tr><td>深圳→北戴河机场 直飞</td><td>8/22</td><td>—</td><td class="price">无直飞</td><td><span class="real">实查</span> 全为中转7h+，排除</td></tr>
-      <tr><td>武汉→北戴河 直达火车</td><td>—</td><td>直达0车次；直达秦皇岛G1278 07:50→15:23</td><td class="price">¥693.5（7.5h）</td><td><span class="real">实查</span> 太长，不如飞天津转</td></tr>
+      <tr><th>维度</th><th>伊春Plan B（8月）</th><th>伊春Plan A（9月）</th><th>QHD-8月版</th><th>QHD-9月版</th></tr>
+      <tr><td>现金</td><td>≈1.51–1.65万</td><td>≈1.16–1.24万</td><td>≈1.54–1.84万</td><td><b>≈1.26–1.41万</b></td></tr>
+      <tr><td>里程消耗</td><td><b>60,000分</b></td><td>45,000分</td><td>≈0（可选15k）</td><td><b>0</b></td></tr>
+      <tr><td>等效全现金</td><td>≈2.1万</td><td>≈1.48–1.56万</td><td>≈1.54–1.84万</td><td>≈1.26–1.41万</td></tr>
+      <tr><td>主题</td><td>森林火山丹顶鹤</td><td><b>五花山彩林</b></td><td>海+沙+动物+草原</td><td>海+沙+动物+<b>金秋草原</b></td></tr>
+      <tr><td>孩子玩点</td><td>喂虎喂鹿喂松鼠、恐龙、游船、放飞</td><td>喂鹿、恐龙、小火车、游船</td><td>赶海、滑沙、乐岛、动物园、骑马喂羊</td><td>同左（无乐岛，多金秋骑马）</td></tr>
+      <tr><td>人流</td><td>清净</td><td>清净</td><td><b style="color:var(--red)">北戴河8月人海</b></td><td>人海退潮✓</td></tr>
+      <tr><td>请假</td><td>8/22–8/30</td><td><b>只请4天</b></td><td>8/22–8/30</td><td><b>只请4天</b></td></tr>
+      <tr><td>气温</td><td>20–28℃</td><td>10–22℃带外套</td><td>北戴河偏热、坝上凉</td><td>海边18–24℃、坝上0–18℃带厚衣</td></tr>
+      <tr><td>玩水</td><td>溪边踩水</td><td>停</td><td><b>海+水世界全开</b></td><td>海水凉，只赶海</td></tr>
     </table>
-    <div class="note">已剔除廉航；夜车弃用。儿童机票按民航规定可购成人优惠票。玩点核实来源：<a href="http://qhd.bendibao.com/tour/zhuantiqinziyou/" target="_blank">秦皇岛本地宝亲子专题</a> · <a href="https://gs.ctrip.com/html5/you/sight/qinhuangdao132/13486.html" target="_blank">野生动物园（携程）</a> · <a href="https://gs.ctrip.com/html5/you/sight/changli1835/140358.html" target="_blank">昌黎国际滑沙中心（携程）</a> · <a href="https://www.beidaihe186.com/hjhaian_jd_fcd15.php" target="_blank">翡翠岛停业标注（北戴河旅游网）</a>。</div>
+    <div class="note"><b>两条主线怎么选：</b>8月出行（用得上咸宁前置）→ 伊春B（清净凉爽+动物密度最高，花60,000里程）vs QHD-8月（玩点类型最全+留里程，但北戴河人海）；9月出行（蹭中秋只请4天）→ 伊春A（五花山彩林+45,000分把现金压到1.2万档）vs QHD-9月（金秋坝上+零里程1.26–1.41万）。9月这对都是"人少+秋色"，差别是森林彩林vs草原金黄、火车慢游vs自驾。</div>
   </div>
 </section>
 
 <section>
-  <h3>🧾 价格证据截图（携程，2026-07-11 实拍）</h3>
+  <h3>🧾 价格证据截图（携程/Trip.com，2026-07-11 实拍）</h3>
   <div class="evi">
-    <figure><img src="assets-qhd/wuh-tsn-0822.png" alt="武汉-天津8/22"><figcaption><b>武汉→天津 8/22</b> ｜ 东航MU2483早班直飞 ¥400（妈妈+孩子）</figcaption></figure>
-    <figure><img src="assets-qhd/szx-tsn-0822.png" alt="深圳-天津8/22"><figcaption><b>深圳→天津 8/22</b> ｜ 南航CZ5819直飞 ¥910（爸爸；兑15,000里程价值6.1分，可兑可不兑）</figcaption></figure>
-    <figure><img src="assets-qhd/bjs-szx-0830.png" alt="北京-深圳8/30"><figcaption><b>北京→深圳 8/30</b> ｜ 南航大兴08:00 ¥740起——京深大线现金便宜，里程不值得兑</figcaption></figure>
+    <figure><img src="assets-qhd/wuh-tsn-0822.png" alt="武汉-天津8/22"><figcaption><b>武汉→天津 8/22</b> ｜ 东航MU2483早班直飞 ¥400（8月版·母子）</figcaption></figure>
+    <figure><img src="assets-qhd/szx-tsn-0822.png" alt="深圳-天津8/22"><figcaption><b>深圳→天津 8/22</b> ｜ 南航CZ5819直飞 ¥910（8月版·爸爸，可兑15,000里程）</figcaption></figure>
+    <figure><img src="assets-qhd/bjs-szx-0830.png" alt="北京-深圳8/30"><figcaption><b>北京→深圳 8/30</b> ｜ 南航大兴08:00 ¥740起（8月版返程，现金买）</figcaption></figure>
+    <figure><img src="assets-qhd/szx-tsn-0919.png" alt="深圳-天津9/19"><figcaption><b>深圳→天津 9/19</b> ｜ CZ5819 ¥590（2.8折剩3张，9月版去程）</figcaption></figure>
+    <figure><img src="assets-qhd/bjs-szx-0926.png" alt="北京-深圳9/26"><figcaption><b>北京→深圳 9/26</b> ｜ 东航多班¥900（3折）；当日无南航直飞（9月版返程）</figcaption></figure>
+    <figure><img src="assets-qhd/hotel-bdh-0822.png" alt="北戴河酒店8月"><figcaption><b>北戴河酒店 8/22入住</b> ｜ 亲子海景¥575-589 / 如家精选¥227（旺季）</figcaption></figure>
+    <figure><img src="assets-qhd/hotel-bdh-0919.png" alt="北戴河酒店9月"><figcaption><b>北戴河酒店 9/19入住</b> ｜ 夏至亲子降到¥158、谷雨海景¥121——约为8月1/3的证据</figcaption></figure>
+    <figure><img src="assets-qhd/hotel-cd-0826.png" alt="承德酒店8月"><figcaption><b>承德酒店 8/26入住</b> ｜ 希尔顿欢朋¥526含早 / 环宇假日¥222含早</figcaption></figure>
+    <figure><img src="assets-qhd/hotel-cd-0922.png" alt="承德酒店9月"><figcaption><b>承德酒店 9/22入住</b> ｜ 欢朋¥303 / 环宇假日¥153（均含早）</figcaption></figure>
+    <figure><img src="assets-qhd/hotel-datan-0827.png" alt="大滩酒店8月"><figcaption><b>丰宁大滩 8/27入住</b> ｜ 星云谷¥329 / 云朵亲子三人间¥418（中国马镇度假区）</figcaption></figure>
+    <figure><img src="assets-qhd/hotel-datan-0923.png" alt="大滩酒店9月"><figcaption><b>丰宁大滩 9/23入住</b> ｜ 云朵亲子房¥197 / 天马4星¥356——金秋价差不大</figcaption></figure>
+    <figure><img src="assets-qhd/hotel-bj-0829.png" alt="北京酒店8月"><figcaption><b>北京前门 8/29入住</b> ｜ CitiGO¥494 / 东禾家庭房¥468</figcaption></figure>
+    <figure><img src="assets-qhd/hotel-bj-0925.png" alt="北京酒店9月中秋"><figcaption><b>北京前门 9/25中秋入住</b> ｜ 东禾家庭房¥513 / CitiGO¥596（中秋略涨）</figcaption></figure>
   </div>
-  <div class="note">截图为2026-07-11查询快照，特价舱位余票有限，出票时以平台实时价为准。</div>
+  <div class="note">截图为2026-07-11查询快照，特价舱位/房型余量有限，下单时以平台实时价为准。</div>
 </section>
 
 <section>
-  <h3>📋 若选此方案的待办</h3>
+  <h3>📋 若选秦皇岛线的订票节点</h3>
   <div class="card">
     <ul class="tips">
-      <li><b>酒店实查</b>：北戴河8/22–25（4晚）、承德8/26、坝上8/27–28、北京8/29 按实际日期在携程/Trip.com实查并锁免费取消房型，替换本页估算价。</li>
-      <li><b>租车</b>：一嗨App确认「秦皇岛/北戴河取 8/25晚 · 北京还 8/29」车型与总价（异地免还车费口径），暑期车源紧。</li>
-      <li><b>草原定稿</b>：丰宁大滩（推荐带娃，少3小时车）vs 乌兰布统（景更大+门票120）。</li>
-      <li><b>机票一周内出票</b>：¥400/¥740–910 均为2.3–4.3折特价舱。</li>
-      <li><b>12306节点</b>：深圳北→咸宁北 8/14 → <b>7/31开抢</b>；天津→北戴河 8/22 → 8/8开抢（预售期15天）。</li>
-      <li><b>行前</b>：鸽子窝查当日潮汐表；乐岛/野生动物园开门即入错峰；防晒+换洗衣物+坝上早晚薄外套。</li>
+      <li><b>机票一周内出票</b>：¥400/¥590/¥740–910 均为2.3–4.3折特价舱；9/26 MU ¥900为3折。</li>
+      <li><b>12306（预售期15天）</b>：8月版 深圳北→咸宁北 8/14 → <b>7/31开抢</b>、天津→北戴河 8/22 → 8/8；9月版 天津→北戴河 9/19 → 9/5。</li>
+      <li><b>酒店</b>：上表全部为可下单实查价，多数免费取消，方案定了就锁（8月北戴河亲子房最紧俏）。</li>
+      <li><b>租车</b>：一嗨确认「北戴河/秦皇岛取 · 北京还」总价（8月版5天 / 9月版4天），暑期车源紧。</li>
+      <li><b>行前确认</b>：鸽子窝当日潮汐表；9月版打金沙湾/乐岛电话确认水上项目运营；坝上9月底早晚接近0℃带抓绒+薄羽绒；孩子带身份证/户口本。</li>
     </ul>
   </div>
 </section>
 
 <footer>
-  数据来源（2026-07-11实查快照）：<a href="https://flights.ctrip.com/" target="_blank">携程机票</a> · <a href="https://trains.ctrip.com/" target="_blank">携程火车票</a>；玩点核实：<a href="http://qhd.bendibao.com/tour/zhuantiqinziyou/" target="_blank">秦皇岛本地宝</a> · <a href="https://gs.ctrip.com/html5/you/sight/qinhuangdao132/13486.html" target="_blank">携程景点页</a> · <a href="https://www.beidaihe186.com/hjhaian_jd_fcd15.php" target="_blank">北戴河旅游网（翡翠岛停业标注）</a>。
-  本页为替代方案，与伊春定稿两案（<code>伊春旅行方案_行程可视化.html</code>）平行比较；配套：<code>秦皇岛坝上替代方案_价格实查.md</code> · <code>assets-qhd/</code>（证据截图，请与本HTML放在同一目录）。
+  数据来源（2026-07-11实查快照）：<a href="https://flights.ctrip.com/" target="_blank">携程机票</a> · <a href="https://trains.ctrip.com/" target="_blank">携程火车票</a> · <a href="https://hk.trip.com/hotels/" target="_blank">Trip.com 酒店</a>；玩点核实：<a href="http://qhd.bendibao.com/tour/zhuantiqinziyou/" target="_blank">秦皇岛本地宝</a> · <a href="https://www.beidaihe186.com/hjhaian_jd_fcd15.php" target="_blank">北戴河旅游网（翡翠岛停业标注）</a>。
+  本页与伊春定稿两案（<a href="./index.html">主页</a>）平行比较；配套：<code>秦皇岛坝上替代方案_价格实查.md</code> · <code>assets-qhd/</code>（证据截图，请与本HTML放在同一目录）。
 </footer>
 
 </div>
