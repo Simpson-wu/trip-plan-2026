@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秦皇岛+坝上草原 · 替代方案（海·沙·动物·草原）| 价格实查手册</title>
+<style>
+  :root{
+    --ink:#1a2b23; --muted:#5c6f66; --line:#e3e9e5; --bg:#f6f8f6; --card:#ffffff;
+    --green:#2f7d5d; --green-soft:#e7f2ec; --amber:#b97324; --amber-soft:#faf0e2;
+    --blue:#33628c; --blue-soft:#e8eff6; --red:#a8433a; --red-soft:#f8e9e7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 60px}
+
+  .hero{position:relative;border-radius:0 0 22px 22px;overflow:hidden;min-height:320px;display:flex;align-items:flex-end;
+    background:linear-gradient(135deg,#1c5f8a 0%,#2e86ab 34%,#5aa88a 68%,#3c7d4f 100%)}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,20,.02) 40%,rgba(10,30,20,.5))}
+  .hero-inner{position:relative;z-index:2;color:#fff;padding:40px 36px}
+  .hero h1{font-size:32px;letter-spacing:2px;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+  .hero p{margin-top:8px;font-size:15px;opacity:.95;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+  .hero .chips{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-size:12px;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(4px)}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:22px 0 30px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .kpi .t{font-size:12px;color:var(--muted)}
+  .kpi .v{font-size:20px;font-weight:700;margin-top:2px}
+  .kpi .s{font-size:12px;color:var(--muted);margin-top:2px}
+  .kpi.hot{border-color:var(--red);background:#fffaf9}
+  .kpi.hot .v{color:var(--red)}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:920px){.cols{grid-template-columns:1fr}}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .plan-head{padding:18px 20px;border-bottom:1px solid var(--line)}
+  .plan-sea .plan-head{background:linear-gradient(135deg,#e8eff6,#f5f8fb)}
+  .plan-grass .plan-head{background:linear-gradient(135deg,#eaf5ef,#f7fbf9)}
+  .plan-head h2{font-size:19px}
+  .plan-head .sub{font-size:13px;color:var(--muted);margin-top:4px}
+  .plan-sea h2{color:var(--blue)} .plan-grass h2{color:var(--green)}
+
+  .timeline{padding:14px 20px 20px}
+  .day{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
+  .day:last-child{border-bottom:none}
+  .dnum{text-align:center}
+  .dnum .d{display:inline-block;min-width:40px;height:40px;line-height:40px;border-radius:20px;font-weight:700;font-size:13px;color:#fff;padding:0 4px}
+  .plan-sea .dnum .d{background:var(--blue)} .plan-grass .dnum .d{background:var(--green)}
+  .dnum .date{font-size:11px;color:var(--muted);margin-top:3px}
+  .dbody .title{font-weight:700;font-size:14.5px}
+  .dbody .desc{font-size:13px;color:#37473f;margin-top:2px}
+  .dbody .stay{font-size:12px;color:var(--muted);margin-top:4px}
+  .dbody .stay em{font-style:normal;color:var(--blue)}
+  .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:4px;margin-left:6px;vertical-align:1px}
+  .tag.fun{background:var(--green-soft);color:var(--green)}
+  .tag.move{background:var(--blue-soft);color:var(--blue)}
+  .tag.warn{background:var(--amber-soft);color:var(--amber)}
+  .tag.home{background:#f0eaf6;color:#6b4f9e}
+
+  section{margin-top:34px}
+  section h3{font-size:18px;margin-bottom:12px;padding-left:10px;border-left:4px solid var(--blue)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{background:#f0f4f1;text-align:left;padding:8px 10px;font-weight:600;border-bottom:1px solid var(--line);white-space:nowrap}
+  td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .price{font-weight:700;color:var(--green);white-space:nowrap}
+  .real{font-size:11px;background:var(--green-soft);color:var(--green);padding:1px 6px;border-radius:4px;white-space:nowrap}
+  .est{font-size:11px;background:#eef0ef;color:var(--muted);padding:1px 6px;border-radius:4px;white-space:nowrap}
+
+  .bars .row{display:grid;grid-template-columns:230px 1fr 130px;gap:10px;align-items:center;margin:9px 0;font-size:13px}
+  @media(max-width:640px){.bars .row{grid-template-columns:140px 1fr 110px}}
+  .bar{height:16px;border-radius:5px;background:var(--blue-soft);position:relative;overflow:hidden}
+  .bar>i{position:absolute;left:0;top:0;bottom:0;border-radius:5px;background:var(--blue)}
+  .bars .amt{text-align:right;font-weight:600;white-space:nowrap}
+  .vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+
+  .evi{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+  .evi figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .evi img{width:100%;display:block;border-bottom:1px solid var(--line)}
+  .evi figcaption{padding:9px 12px;font-size:12.5px;color:#37473f}
+  .evi figcaption b{color:var(--ink)}
+
+  .note{font-size:12px;color:var(--muted);margin-top:10px}
+  .note a{color:var(--blue)}
+  ul.tips{font-size:13.5px;padding-left:20px}
+  ul.tips li{margin:7px 0}
+  .deadline{background:var(--red-soft);border:1px solid #e8c8c3;border-radius:14px;padding:16px 20px;margin-bottom:16px;font-size:14px}
+  .deadline b{color:var(--red)}
+  footer{margin-top:40px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+  footer a{color:var(--blue)}
+  @media(max-width:640px){
+    .hero{min-height:240px}
+    .hero-inner{padding:24px 18px}
+    .hero h1{font-size:23px}
+    .hero p{font-size:13px}
+    .kpi .v{font-size:17px}
+    .plan-head h2{font-size:17px}
+    .day{grid-template-columns:52px 1fr;gap:8px}
+    .dnum .d{min-width:34px;height:34px;line-height:34px;font-size:12px}
+    table{font-size:12px}
+    th,td{padding:6px 7px}
+    section h3{font-size:16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h1>🌊 秦皇岛 + 坝上草原 · 替代方案</h1>
+    <p>赶海 · 滑沙 · 海洋王国 · 野生动物园 · 骑马喂羊 —— 海沙动物草原四合一 ｜ 与伊春定稿两案平行的备选，时间框架同 Plan B</p>
+    <div class="chips">
+      <span class="chip">机票/火车：2026-07-11 携程按出行日期实查</span>
+      <span class="chip">酒店：旺季行情估算（入选后实查）</span>
+      <span class="chip">妈妈+孩子 8/14 先回咸宁 · 8/22 天津会合 · 8/30 回深圳</span>
+      <span class="chip">85,000里程基本不动</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<div class="kpis">
+  <div class="kpi"><div class="t">本方案总预算</div><div class="v">现金≈1.65–1.85万</div><div class="s">里程几乎不动（兑爸爸深天一段则≈1.56–1.76万+15,000分）</div></div>
+  <div class="kpi"><div class="t">对比：伊春 Plan B</div><div class="v">≈1.51–1.65万+60k分</div><div class="s">全现金口径伊春要≈2.1万——纯现金比，秦皇岛版更便宜</div></div>
+  <div class="kpi"><div class="t">主题覆盖</div><div class="v">海+沙+动物+草原</div><div class="s">最初想要的组合一次凑齐</div></div>
+  <div class="kpi hot"><div class="t">最大体验风险</div><div class="v">8月下旬北戴河人海</div><div class="s">鸽子窝/乐岛需开门即入错峰；伊春线则清净</div></div>
+</div>
+
+<div class="cols">
+
+  <!-- 海·沙段 -->
+  <div class="plan plan-sea">
+    <div class="plan-head">
+      <h2>上半场 · 海与沙（北戴河—昌黎—山海关）</h2>
+      <div class="sub">8/14 母子回咸宁（零房费）→ 8/22 天津会合进北戴河 → 8/25 玩完海边取车</div>
+    </div>
+    <div class="timeline">
+      <div class="day"><div class="dnum"><span class="d">前置</span><div class="date">8/14 五</div></div>
+        <div class="dbody"><div class="title">妈妈+孩子：深圳北 → 咸宁北，居家住到8/22 <span class="tag move">高铁4.5h</span><span class="tag home">零房费</span></div>
+        <div class="desc">二等座 ¥538.5/成人（实查）+ 儿童约半价；爸爸留深上班一周</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D1</span><div class="date">8/22 六</div></div>
+        <div class="dbody"><div class="title">天津会合日 → 高铁进北戴河 <span class="tag move">双线飞+高铁1.5h</span></div>
+        <div class="desc">母子：武汉✈天津 MU2483 07:55→09:55（<b>¥400×2实查</b>）；爸爸：深圳✈天津 CZ5819 09:40→13:00（<b>¥910实查</b>，可兑15,000里程，价值6.1分/里程可兑可不兑）；机场地铁→天津站→高铁1.5h（二等¥115-122，买不到北戴河站就买秦皇岛站，班次更多）</div>
+        <div class="stay">宿：北戴河（旺季估¥400–700 <span class="est">待核实</span>）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D2</span><div class="date">8/23 日</div></div>
+        <div class="dbody"><div class="title">鸽子窝赶海 + 秦皇岛野生动物园 <span class="tag fun">赶海·喂羊驼长颈鹿</span></div>
+        <div class="desc">上午按潮汐表赶海（小桶小铲抓螃蟹小虾）→ 下午野生动物园（90元/人，小火车进猛兽区，两地相邻），早去动物活跃</div>
+        <div class="stay">宿：北戴河</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D3</span><div class="date">8/24 一</div></div>
+        <div class="dbody"><div class="title">昌黎黄金海岸：国际滑沙中心 +（选）金沙湾沙雕水城 <span class="tag fun">滑沙·戏水</span><span class="tag move">40min</span></div>
+        <div class="desc">滑沙中心80元/人（儿童50）：索道上山、滑沙滑草不限次+儿童乐园；体力富余隔壁金沙湾"宝贝水城"（约75元）。⚠️ 翡翠岛有停业标注，已用滑沙中心替代</div>
+        <div class="stay">宿：北戴河/黄金海岸</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D4</span><div class="date">8/25 二</div></div>
+        <div class="dbody"><div class="title">山海关：乐岛海洋王国 + 天下第一关/老龙头 <span class="tag fun">海豚白鲸·长城入海</span></div>
+        <div class="desc">乐岛165元/人（海洋馆+水世界+动物表演，玩大半天）→ 傍晚古城或老龙头；晚上取租车（一嗨，秦皇岛取·北京还，异地免还车费）</div>
+        <div class="stay">宿：北戴河</div></div></div>
+    </div>
+  </div>
+
+  <!-- 草原段 -->
+  <div class="plan plan-grass">
+    <div class="plan-head">
+      <h2>下半场 · 草原（承德—坝上—北京）</h2>
+      <div class="sub">8/25晚取车 → 承德避暑山庄 → 坝上两晚骑马喂羊 → 北京还车 8/30 飞回深圳</div>
+    </div>
+    <div class="timeline">
+      <div class="day"><div class="dnum"><span class="d">D5</span><div class="date">8/26 三</div></div>
+        <div class="dbody"><div class="title">自驾 → 承德，下午避暑山庄 <span class="tag move">280km·3.5h</span></div>
+        <div class="desc">赶路安排在孩子午睡时段；避暑山庄约130元/人，湖区坐船轻松走</div>
+        <div class="stay">宿：承德（估¥300–400 <span class="est">待核实</span>）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D6</span><div class="date">8/27 四</div></div>
+        <div class="dbody"><div class="title">上坝：骑马、喂羊、滑草 <span class="tag fun">羊和牛管够</span><span class="tag move">2h</span></div>
+        <div class="desc"><b>推荐丰宁坝上大滩镇</b>（承德过去约150km 2h，带娃车程友好）；备选乌兰布统（3h，景更开阔+景区门票120元/人，全程多约3小时车）</div>
+        <div class="stay">宿：坝上（估¥350–500 <span class="est">待核实</span>）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D7</span><div class="date">8/28 五</div></div>
+        <div class="dbody"><div class="title">坝上全天 + 篝火烤全羊 <span class="tag fun">草原深度日</span></div>
+        <div class="desc">丰宁：大汗行宫/闪电湖；乌兰布统：公主湖、将军泡子；骑马项目约100–200元/次，晚上篝火烤全羊</div>
+        <div class="stay">宿：坝上（连住2晚）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D8</span><div class="date">8/29 六</div></div>
+        <div class="dbody"><div class="title">坝上 → 北京，还车 <span class="tag move">丰宁280km·4h / 乌兰布统450km·5.5h</span></div>
+        <div class="desc">午睡时段赶路；北京还车后傍晚前门/王府井轻松逛</div>
+        <div class="stay">宿：北京（估¥400–500 <span class="est">待核实</span>）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D9</span><div class="date">8/30 日</div></div>
+        <div class="dbody"><div class="title">✈ 回深圳（京深大线，现金买最划算）<span class="tag move">直飞3.5h</span></div>
+        <div class="desc">南航 CZ3194 大兴08:00→11:20 <b>¥740</b>（剩1张）/ CZ3156 09:00 <b>¥900</b> / 深航ZH9114 首都07:55 ¥750；午后班约¥1,000–1,100。<b>兑里程只值4.9–6分/里程，不建议兑</b>——85,000分留账户</div></div></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <h3>⚖️ 与伊春 Plan B 摆在一起看（同一时间框架：8/14咸宁 · 8/22会合 · 8/30回深）</h3>
+  <div class="card" style="overflow-x:auto">
+    <table>
+      <tr><th>维度</th><th>伊春 Plan B（8月环线）</th><th>秦皇岛+坝上（本方案）</th></tr>
+      <tr><td>总花费</td><td>现金≈1.51–1.65万 + <b>用掉60,000里程</b></td><td>现金≈1.65–1.85万 + <b>里程几乎不动</b>（85,000分留账户）</td></tr>
+      <tr><td>等效全现金口径</td><td>≈2.1万（不用里程时）</td><td><b>≈1.65–1.85万——纯现金比更便宜</b></td></tr>
+      <tr><td>主题</td><td>森林+火山+丹顶鹤，22℃避暑</td><td><b>海+沙+动物+草原四合一</b>（最初想要的组合）</td></tr>
+      <tr><td>孩子玩点</td><td>喂虎喂鹿喂松鼠、恐龙、游船、丹顶鹤放飞</td><td>赶海、滑沙、海洋王国、野生动物园、<b>骑马喂羊</b></td></tr>
+      <tr><td>气温体感</td><td>20–28℃全程凉爽</td><td>北戴河28–31℃有暑气，坝上15–25℃凉</td></tr>
+      <tr><td>人流</td><td>小众清净</td><td><b>北戴河8月是全国级人海</b>，各景点须开门即入</td></tr>
+      <tr><td>交通衔接</td><td>会合哈尔滨；EU支线90座紧俏</td><td>会合天津；京津冀班次海量、无紧俏段</td></tr>
+      <tr><td>新鲜感</td><td>全家没去过的大兴安岭系</td><td>海边与深圳重合度高，增量在滑沙和草原</td></tr>
+      <tr><td>车程</td><td>环线约1,100km，一个330km日</td><td>约1,000km，两个赶路日（3.5h+4h）</td></tr>
+    </table>
+    <div class="note"><b>一句话：</b>想一次凑齐海沙草原动物、并把85,000里程留着以后用 → 选本方案；想要凉爽清净、动物互动密度最高、里程花在9分+的刀刃上 → 选伊春Plan B。北戴河的人流是本方案最大的体验风险。</div>
+  </div>
+</section>
+
+<section>
+  <h3>💰 费用构成（一家三口，现金口径）</h3>
+  <div class="card">
+    <b style="color:var(--blue)">现金≈16,500–18,500元 · 里程基本不动</b>
+    <div class="bars" style="margin-top:8px">
+      <div class="row"><span>机票（武津×2+深津×1+京深×3）</span><div class="bar"><i style="width:100%"></i></div><span class="amt">≈4,800元</span></div>
+      <div class="row"><span>火车（咸宁往返段+津戴×3）</span><div class="bar"><i style="width:25%"></i></div><span class="amt">≈1,200元</span></div>
+      <div class="row"><span>租车5天+油费过路（秦皇岛取·北京还）</span><div class="bar"><i style="width:67%"></i></div><span class="amt">≈3,200元</span></div>
+      <div class="row"><span>北戴河段打车</span><div class="bar"><i style="width:8%"></i></div><span class="amt">≈400元</span></div>
+      <div class="row"><span>酒店8晚（北戴河4+承德1+坝上2+北京1）</span><div class="bar"><i style="width:80%"></i></div><span class="amt">≈3,850元（待核实）</span></div>
+      <div class="row"><span>门票+骑马滑草项目</span><div class="bar"><i style="width:44%"></i></div><span class="amt">≈2,100元</span></div>
+      <div class="row"><span>餐饮杂项（9天）</span><div class="bar"><i style="width:48%"></i></div><span class="amt">≈2,300元</span></div>
+    </div>
+    <div class="note">金额取区间中值；酒店为旺季行情估算，方案入选后按实际日期在携程/Trip.com实查替换。门票主项：野生动物园90、乐岛165、滑沙中心80（儿童50）、避暑山庄约130、鸽子窝/山海关小额、骑马100–200/次；孩子1.2米以下多免/半价。</div>
+  </div>
+</section>
+
+<section>
+  <h3>✈️ 大交通实查价（携程，2026-07-11，均按实际出行日期查询）</h3>
+  <div class="card" style="overflow-x:auto">
+    <table>
+      <tr><th>航段/车段</th><th>日期</th><th>班次·时刻</th><th>实查价</th><th>口径</th></tr>
+      <tr><td>深圳北→咸宁北 高铁（母子）</td><td><b>8/14</b></td><td>G字头每日17班 · 约4.5h</td><td class="price">¥504.5–597（二等）</td><td><span class="real">实查</span> 与伊春Plan B同段</td></tr>
+      <tr><td>武汉→天津（母子×2）</td><td><b>8/22</b></td><td>东航MU2483 · 07:55→09:55 直飞</td><td class="price">¥400</td><td><span class="real">实查</span> 3.6折</td></tr>
+      <tr><td>深圳→天津（爸爸×1）</td><td><b>8/22</b></td><td>南航CZ5819 · 09:40→13:00 直飞</td><td class="price">¥910</td><td><span class="real">实查</span> 可兑15,000里程（6.1分/里程，可兑可不兑）</td></tr>
+      <tr><td>天津→北戴河 高铁</td><td>8/22</td><td>G字头多班 · 约1.5h</td><td class="price">二等¥115–122</td><td><span class="real">实查</span> 班次以12306为准，可改到秦皇岛站</td></tr>
+      <tr><td>北京→深圳（全家×3）</td><td><b>8/30</b></td><td>南航CZ3194大兴08:00 ¥740 / CZ3156 09:00 ¥900 / 深航ZH9114 ¥750</td><td class="price">¥740–900起</td><td><span class="real">实查</span> 午后档¥1,000–1,100；<b>不建议兑里程</b>（4.9–6分）</td></tr>
+      <tr><td>深圳→北戴河机场 直飞</td><td>8/22</td><td>—</td><td class="price">无直飞</td><td><span class="real">实查</span> 全为中转7h+，排除</td></tr>
+      <tr><td>武汉→北戴河 直达火车</td><td>—</td><td>直达0车次；直达秦皇岛G1278 07:50→15:23</td><td class="price">¥693.5（7.5h）</td><td><span class="real">实查</span> 太长，不如飞天津转</td></tr>
+    </table>
+    <div class="note">已剔除廉航；夜车弃用。儿童机票按民航规定可购成人优惠票。玩点核实来源：<a href="http://qhd.bendibao.com/tour/zhuantiqinziyou/" target="_blank">秦皇岛本地宝亲子专题</a> · <a href="https://gs.ctrip.com/html5/you/sight/qinhuangdao132/13486.html" target="_blank">野生动物园（携程）</a> · <a href="https://gs.ctrip.com/html5/you/sight/changli1835/140358.html" target="_blank">昌黎国际滑沙中心（携程）</a> · <a href="https://www.beidaihe186.com/hjhaian_jd_fcd15.php" target="_blank">翡翠岛停业标注（北戴河旅游网）</a>。</div>
+  </div>
+</section>
+
+<section>
+  <h3>🧾 价格证据截图（携程，2026-07-11 实拍）</h3>
+  <div class="evi">
+    <figure><img src="assets-qhd/wuh-tsn-0822.png" alt="武汉-天津8/22"><figcaption><b>武汉→天津 8/22</b> ｜ 东航MU2483早班直飞 ¥400（妈妈+孩子）</figcaption></figure>
+    <figure><img src="assets-qhd/szx-tsn-0822.png" alt="深圳-天津8/22"><figcaption><b>深圳→天津 8/22</b> ｜ 南航CZ5819直飞 ¥910（爸爸；兑15,000里程价值6.1分，可兑可不兑）</figcaption></figure>
+    <figure><img src="assets-qhd/bjs-szx-0830.png" alt="北京-深圳8/30"><figcaption><b>北京→深圳 8/30</b> ｜ 南航大兴08:00 ¥740起——京深大线现金便宜，里程不值得兑</figcaption></figure>
+  </div>
+  <div class="note">截图为2026-07-11查询快照，特价舱位余票有限，出票时以平台实时价为准。</div>
+</section>
+
+<section>
+  <h3>📋 若选此方案的待办</h3>
+  <div class="card">
+    <ul class="tips">
+      <li><b>酒店实查</b>：北戴河8/22–25（4晚）、承德8/26、坝上8/27–28、北京8/29 按实际日期在携程/Trip.com实查并锁免费取消房型，替换本页估算价。</li>
+      <li><b>租车</b>：一嗨App确认「秦皇岛/北戴河取 8/25晚 · 北京还 8/29」车型与总价（异地免还车费口径），暑期车源紧。</li>
+      <li><b>草原定稿</b>：丰宁大滩（推荐带娃，少3小时车）vs 乌兰布统（景更大+门票120）。</li>
+      <li><b>机票一周内出票</b>：¥400/¥740–910 均为2.3–4.3折特价舱。</li>
+      <li><b>12306节点</b>：深圳北→咸宁北 8/14 → <b>7/31开抢</b>；天津→北戴河 8/22 → 8/8开抢（预售期15天）。</li>
+      <li><b>行前</b>：鸽子窝查当日潮汐表；乐岛/野生动物园开门即入错峰；防晒+换洗衣物+坝上早晚薄外套。</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  数据来源（2026-07-11实查快照）：<a href="https://flights.ctrip.com/" target="_blank">携程机票</a> · <a href="https://trains.ctrip.com/" target="_blank">携程火车票</a>；玩点核实：<a href="http://qhd.bendibao.com/tour/zhuantiqinziyou/" target="_blank">秦皇岛本地宝</a> · <a href="https://gs.ctrip.com/html5/you/sight/qinhuangdao132/13486.html" target="_blank">携程景点页</a> · <a href="https://www.beidaihe186.com/hjhaian_jd_fcd15.php" target="_blank">北戴河旅游网（翡翠岛停业标注）</a>。
+  本页为替代方案，与伊春定稿两案（<code>伊春旅行方案_行程可视化.html</code>）平行比较；配套：<code>秦皇岛坝上替代方案_价格实查.md</code> · <code>assets-qhd/</code>（证据截图，请与本HTML放在同一目录）。
+</footer>
+
+</div>
+</body>
+</html>
