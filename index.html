@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小兴安岭亲子之旅 · Plan A/B/C 三案对比 | 全实查方案手册</title>
+<title>小兴安岭亲子之旅 · 定稿两案 Plan B（8月）vs Plan A（9月）| 全实查方案手册</title>
 <style>
   :root{
     --ink:#1a2b23; --muted:#5c6f66; --line:#e3e9e5; --bg:#f6f8f6; --card:#ffffff;
     --green:#2f7d5d; --green-soft:#e7f2ec; --amber:#b97324; --amber-soft:#faf0e2;
-    --blue:#33628c; --blue-soft:#e8eff6; --red:#a8433a;
+    --blue:#33628c; --blue-soft:#e8eff6; --red:#a8433a; --red-soft:#f8e9e7;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
-  .wrap{max-width:1280px;margin:0 auto;padding:0 20px 60px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 60px}
 
   /* ===== Hero ===== */
   .hero{position:relative;border-radius:0 0 22px 22px;overflow:hidden;min-height:420px;display:flex;align-items:flex-end;
@@ -44,29 +44,30 @@
   .kpi .t{font-size:12px;color:var(--muted)}
   .kpi .v{font-size:20px;font-weight:700;margin-top:2px}
   .kpi .s{font-size:12px;color:var(--muted);margin-top:2px}
+  .kpi.hot{border-color:var(--red);background:#fffaf9}
+  .kpi.hot .v{color:var(--red)}
 
-  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
   @media(max-width:920px){.cols{grid-template-columns:1fr}}
   .plan{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
   .plan-head{padding:18px 20px;border-bottom:1px solid var(--line)}
   .plan-a .plan-head{background:linear-gradient(135deg,#f9f1e4,#fcf8f1)}
   .plan-b .plan-head{background:linear-gradient(135deg,#eaf5ef,#f7fbf9)}
-  .plan-c .plan-head{background:linear-gradient(135deg,#e8eff6,#f5f8fb)}
-  .plan-head h2{font-size:18px}
+  .plan-head h2{font-size:19px}
   .plan-head .sub{font-size:13px;color:var(--muted);margin-top:4px}
-  .plan-head .cost{margin-top:10px;font-size:13.5px}
-  .plan-head .cost b{font-size:17px}
-  .plan-a .cost b{color:var(--amber)} .plan-b .cost b{color:var(--green)} .plan-c .cost b{color:var(--blue)}
+  .plan-head .cost{margin-top:10px;font-size:14px}
+  .plan-head .cost b{font-size:19px}
+  .plan-a .cost b{color:var(--amber)} .plan-b .cost b{color:var(--green)}
 
-  .timeline{padding:14px 18px 20px}
-  .day{display:grid;grid-template-columns:60px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line)}
+  .timeline{padding:14px 20px 20px}
+  .day{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
   .day:last-child{border-bottom:none}
   .dnum{text-align:center}
   .dnum .d{display:inline-block;min-width:40px;height:40px;line-height:40px;border-radius:20px;font-weight:700;font-size:13px;color:#fff;padding:0 4px}
-  .plan-a .dnum .d{background:var(--amber)} .plan-b .dnum .d{background:var(--green)} .plan-c .dnum .d{background:var(--blue)}
+  .plan-a .dnum .d{background:var(--amber)} .plan-b .dnum .d{background:var(--green)}
   .dnum .date{font-size:11px;color:var(--muted);margin-top:3px}
-  .dbody .title{font-weight:700;font-size:14px}
-  .dbody .desc{font-size:12.5px;color:#37473f;margin-top:2px}
+  .dbody .title{font-weight:700;font-size:14.5px}
+  .dbody .desc{font-size:13px;color:#37473f;margin-top:2px}
   .dbody .stay{font-size:12px;color:var(--muted);margin-top:4px}
   .dbody .stay em{font-style:normal;color:var(--blue)}
   .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:4px;margin-left:6px;vertical-align:1px}
@@ -85,16 +86,13 @@
   .price{font-weight:700;color:var(--green);white-space:nowrap}
   .real{font-size:11px;background:var(--green-soft);color:var(--green);padding:1px 6px;border-radius:4px;white-space:nowrap}
   .est{font-size:11px;background:#eef0ef;color:var(--muted);padding:1px 6px;border-radius:4px;white-space:nowrap}
-  .pb{font-size:11px;background:var(--green-soft);color:var(--green);padding:1px 6px;border-radius:4px;white-space:nowrap}
-  .pc{font-size:11px;background:var(--blue-soft);color:var(--blue);padding:1px 6px;border-radius:4px;white-space:nowrap}
-  .pa{font-size:11px;background:var(--amber-soft);color:var(--amber);padding:1px 6px;border-radius:4px;white-space:nowrap}
+  .when{font-weight:700;color:var(--red);white-space:nowrap}
 
   .bars .row{display:grid;grid-template-columns:230px 1fr 130px;gap:10px;align-items:center;margin:9px 0;font-size:13px}
   @media(max-width:640px){.bars .row{grid-template-columns:140px 1fr 110px}}
   .bar{height:16px;border-radius:5px;background:var(--green-soft);position:relative;overflow:hidden}
   .bar>i{position:absolute;left:0;top:0;bottom:0;border-radius:5px;background:var(--green)}
   .bars.a .bar>i{background:var(--amber)} .bars.a .bar{background:var(--amber-soft)}
-  .bars.c .bar>i{background:var(--blue)} .bars.c .bar{background:var(--blue-soft)}
   .bars .amt{text-align:right;font-weight:600;white-space:nowrap}
   .vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 
@@ -109,6 +107,8 @@
   .note a{color:var(--blue)}
   ul.tips{font-size:13.5px;padding-left:20px}
   ul.tips li{margin:7px 0}
+  .deadline{background:var(--red-soft);border:1px solid #e8c8c3;border-radius:14px;padding:16px 20px;margin-bottom:16px;font-size:14px}
+  .deadline b{color:var(--red)}
   footer{margin-top:40px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
   footer a{color:var(--blue)}
   @media(max-width:640px){
@@ -118,7 +118,7 @@
     .hero p{font-size:13px}
     .gallery{grid-auto-rows:120px}
     .kpi .v{font-size:17px}
-    .plan-head h2{font-size:16px}
+    .plan-head h2{font-size:17px}
     .day{grid-template-columns:52px 1fr;gap:8px}
     .dnum .d{min-width:34px;height:34px;line-height:34px;font-size:12px}
     table{font-size:12px}
@@ -131,13 +131,14 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <h1>🌲 小兴安岭亲子之旅</h1>
-    <p>喂鹿 · 喂松鼠 · 恐龙 · 火山石 · 丹顶鹤 —— 一家三口的森林大冒险 ｜ 9月五花山（A）· 8月先咸宁（B）· 8月先哈尔滨（C），三案任选</p>
+    <h1>🌲 小兴安岭亲子之旅 · 定稿两案</h1>
+    <p>喂鹿 · 喂松鼠 · 恐龙 · 火山石 · 丹顶鹤 —— Plan B（8月·先咸宁后哈尔滨） vs Plan A（9月·五花山），二选一 ｜ 附订票时间表</p>
     <div class="chips">
       <span class="chip">机票/火车：2026-07-11 携程按出行日期实查</span>
       <span class="chip">酒店：Trip.com 按入住日期实查</span>
       <span class="chip">门票：官方定价文件核对</span>
       <span class="chip">85,000南航里程已排入方案</span>
+      <span class="chip">⏰ 建议7/20前拍板</span>
     </div>
   </div>
 </div>
@@ -147,26 +148,75 @@
 <div class="gallery">
   <figure class="g-a"><img src="assets/scene3.webp" alt="金山鹿苑梅花鹿"><figcaption>金山鹿苑 · 凑上来讨吃的梅花鹿</figcaption></figure>
   <figure class="g-b"><img src="assets/scene7.webp" alt="汤旺河白桦林"><figcaption>汤旺河林海奇石 · 白桦林打卡</figcaption></figure>
-  <figure class="g-c"><img src="assets/scene8.webp" alt="扎龙丹顶鹤"><figcaption>扎龙湿地 · 丹顶鹤群（B/C版定时放飞）</figcaption></figure>
+  <figure class="g-c"><img src="assets/scene8.webp" alt="扎龙丹顶鹤"><figcaption>扎龙湿地 · 丹顶鹤群（B版D8定时放飞）</figcaption></figure>
   <figure class="g-d"><img src="assets/scene5.webp" alt="伊春森林小火车"><figcaption>五营森林公园 · 森林小火车站牌合影</figcaption></figure>
   <figure class="g-e"><img src="assets/scene2.webp" alt="鹿苑草甸溪流"><figcaption>鹿苑草甸 · 孩子最爱的踩水小溪</figcaption></figure>
 </div>
 <div class="credit">图片来自你分享的小红书游记《小兴安岭环线亲子游》（@Lina集美集合），仅作本家庭行程参考使用</div>
 
 <div class="kpis">
-  <div class="kpi"><div class="t">Plan A（9月五花山）</div><div class="v">现金≈1.16–1.24万</div><div class="s">+45,000里程（不兑则≈1.48–1.56万）· 请4天假</div></div>
-  <div class="kpi"><div class="t">Plan B（8月·先咸宁后哈尔滨）</div><div class="v">现金≈1.51–1.65万</div><div class="s">+60,000里程 · 爸爸单飞会合 · 8/30回深</div></div>
-  <div class="kpi"><div class="t">Plan C（8月·先哈尔滨后咸宁）</div><div class="v">现金≈1.58–1.71万</div><div class="s">+60,000里程 · 全家同进同出 · 8/29回深</div></div>
-  <div class="kpi"><div class="t">里程价值（85,000分只够兑一版）</div><div class="v">C最优 10.0分/里程</div><div class="s">B为9.35分 · A为7–10分</div></div>
+  <div class="kpi"><div class="t">Plan B（8月·先咸宁后哈尔滨）</div><div class="v">现金≈1.51–1.65万</div><div class="s">+60,000里程（不用里程≈2.1万）· 玩点满配</div></div>
+  <div class="kpi"><div class="t">Plan A（9月·五花山）</div><div class="v">现金≈1.16–1.24万</div><div class="s">+45,000里程（不兑则≈1.48–1.56万）· 请4天假</div></div>
+  <div class="kpi"><div class="t">伊春酒店 8月 vs 9月</div><div class="v">约2倍</div><div class="s">全季¥752-797 vs ¥357（实查）</div></div>
+  <div class="kpi hot"><div class="t">决策截止建议</div><div class="v">7月20日</div><div class="s">里程只够兑一版；B版首张票7/31开抢；EU支线90座最先售罄</div></div>
 </div>
 
 <div class="cols">
+
+  <!-- Plan B：8月先咸宁 -->
+  <div class="plan plan-b">
+    <div class="plan-head">
+      <h2>Plan B · 8月小兴安岭大环线（自驾）</h2>
+      <div class="sub">妈妈+孩子8/14高铁回咸宁 → 8/22哈尔滨会合 → 环线8/22–8/30（爸爸9天8晚）→ 全家8/30回深圳</div>
+      <div class="cost">一家三口 <b>现金≈15,100–16,500元 + 60,000里程</b>（不用里程≈2.1万）</div>
+    </div>
+    <div class="timeline">
+      <div class="day"><div class="dnum"><span class="d">前置</span><div class="date">8/14 五</div></div>
+        <div class="dbody"><div class="title">妈妈+孩子：深圳北 → 咸宁北，居家住到8/22 <span class="tag move">高铁4.5h</span><span class="tag home">零房费</span></div>
+        <div class="desc">二等座 ¥538.5/成人（实查）+ 儿童约半价；爸爸留深上班一周</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D1</span><div class="date">8/22 六</div></div>
+        <div class="dbody"><div class="title">双线会合日：全家哈尔滨集合 <span class="tag move">双线飞</span></div>
+        <div class="desc">妈妈+孩子：武汉✈哈尔滨 南航CZ5627 16:30→19:40（<b>¥840×2实查</b>）；爸爸：深圳✈哈尔滨（<b>15,000里程兑</b>+税≈¥100，现金要¥1,350实查——价值9分/里程）；晚上中央大街会合</div>
+        <div class="stay">宿：<em>希尔顿欢朋·中央大街 ¥329档</em>（9月实查，8月略高）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D2</span><div class="date">8/23 日</div></div>
+        <div class="dbody"><div class="title">✈ EU2853 早班飞伊春（08:15→09:15，<b>¥480×3实查</b>）<span class="tag fun">喂鹿</span></div>
+        <div class="desc">机场取租车 → 升辉早市（买瓜子备着喂松鼠）→ 下午金山鹿苑喂梅花鹿（门票30元/成人）</div>
+        <div class="stay">宿：伊春市区（8/23实查：汉庭¥455 / 天华御景¥249 / 全季¥752）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D3</span><div class="date">8/24 一</div></div>
+        <div class="dbody"><div class="title">五营森林公园 → 汤旺河石林 <span class="tag fun">喂松鼠·小火车</span></div>
+        <div class="desc">自驾73km到五营（80元/人含观光车）：门口喂松鼠、森林小火车、天赐湖 → 69km到汤旺河（90元/人含观光车）傍晚场</div>
+        <div class="stay">宿：<em>汤旺·亚欧巄城堡酒店 ¥264档</em>（实查）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D4</span><div class="date">8/25 二</div></div>
+        <div class="dbody"><div class="title">嘉荫：恐龙国家地质公园 + 界江游船 <span class="tag fun">恐龙</span><span class="tag move">110km</span></div>
+        <div class="desc">中国第一具恐龙骨架出土地（65元/人）；黄昏坐船看对岸俄罗斯（60元/人·40分钟）</div>
+        <div class="stay">宿：<em>嘉荫屿森 ¥206 / 森澜 ¥322</em>（实查）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D5</span><div class="date">8/26 三</div></div>
+        <div class="dbody"><div class="title">嘉荫 → 五大连池 <span class="tag warn">最长车程日 330km</span></div>
+        <div class="desc">孩子车上午睡；傍晚打卡堰塞湖</div>
+        <div class="stay">宿：五大连池（估 ¥300–450，8/12前后现查锁定）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D6</span><div class="date">8/27 四</div></div>
+        <div class="dbody"><div class="title">温泊 + 龙门石寨（不赶路）<span class="tag fun">火山石</span></div>
+        <div class="desc">单点购票更省：温泊40元+龙门石寨45元/人（旺季价；联票200元只玩两点不划算）；6岁/1.2米以下儿童免票</div>
+        <div class="stay">宿：五大连池（连住2晚）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D7</span><div class="date">8/28 五</div></div>
+        <div class="dbody"><div class="title">五大连池 → 扎龙 <span class="tag move">300km</span></div>
+        <div class="desc">傍晚湿地散步</div>
+        <div class="stay">宿：扎龙/齐齐哈尔（估 ¥300–450）</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D8</span><div class="date">8/29 六</div></div>
+        <div class="dbody"><div class="title">扎龙丹顶鹤放飞 → 还车 → 动车回哈尔滨 <span class="tag fun">观鹤</span></div>
+        <div class="desc">门票65元/人含电瓶车，放飞9:30/11:00/14:00/15:30（夏季）；飞鹤牧场可砍；齐齐哈尔南还车，动车约2h（约¥90/人）</div>
+        <div class="stay">宿：哈尔滨</div></div></div>
+      <div class="day"><div class="dnum"><span class="d">D9</span><div class="date">8/30 日</div></div>
+        <div class="dbody"><div class="title">上午东北虎林园 → ✈ 深圳 <span class="tag fun">喂虎喂熊</span><span class="tag fun">里程兑换</span></div>
+        <div class="desc">虎林园110元/人含观光车（1.2米以下免票）→ 南航CZ3634直飞 18:20→23:20 用<b>45,000里程兑3张</b>+税≈¥300（现金¥1,420/人实查——价值9.5分/里程；经停备选长龙¥1,100）</div></div></div>
+    </div>
+  </div>
 
   <!-- Plan A：9月五花山 -->
   <div class="plan plan-a">
     <div class="plan-head">
       <h2>Plan A · 9月伊春五花山线（包车）</h2>
-      <div class="sub">9/19–9/26 · 深圳⇄哈尔滨 · 中秋只请4天假 · 北线追彩色</div>
+      <div class="sub">9/19–9/26 · 深圳⇄哈尔滨 · 中秋只请4天假（9/21–24）· 北线追彩色</div>
       <div class="cost">一家三口 <b>现金≈11,600–12,400元 + 45,000里程</b>（不兑里程则≈1.48–1.56万）</div>
     </div>
     <div class="timeline">
@@ -202,126 +252,58 @@
         <div class="desc">首选（里程）：<b>南航18:20→23:00，45,000分+税≈¥300</b>，上午加游极地公园；备选（现金）：深航ZH9624 09:00→13:40 ¥1,100/人，兑换余位锁不到时用</div></div></div>
     </div>
   </div>
-
-  <!-- Plan B：8月先咸宁 -->
-  <div class="plan plan-b">
-    <div class="plan-head">
-      <h2>Plan B · 8月环线 · 先咸宁后哈尔滨（自驾）</h2>
-      <div class="sub">妈妈+孩子8/14高铁回咸宁 → 8/22哈尔滨会合 → 环线8/22–8/30 → 全家8/30回深圳</div>
-      <div class="cost">一家三口 <b>现金≈15,100–16,500元 + 60,000里程</b>（不用里程≈2.1万）</div>
-    </div>
-    <div class="timeline">
-      <div class="day"><div class="dnum"><span class="d">前置</span><div class="date">8/14</div></div>
-        <div class="dbody"><div class="title">妈妈+孩子：深圳北 → 咸宁北，居家住到8/22 <span class="tag move">高铁4.5h</span><span class="tag home">零房费</span></div>
-        <div class="desc">二等座 ¥538.5/成人（实查）+ 儿童约半价；爸爸留深上班一周</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D1</span><div class="date">8/22 六</div></div>
-        <div class="dbody"><div class="title">双线会合日：全家哈尔滨集合 <span class="tag move">双线飞</span></div>
-        <div class="desc">妈妈+孩子：武汉✈哈尔滨 南航CZ5627 16:30→19:40（<b>¥840×2实查</b>）；爸爸：深圳✈哈尔滨（<b>15,000里程兑</b>+税≈¥100，现金要¥1,350实查——价值9分/里程）；晚上中央大街会合</div>
-        <div class="stay">宿：<em>希尔顿欢朋·中央大街 ¥329档</em>（9月实查，8月略高）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D2</span><div class="date">8/23 日</div></div>
-        <div class="dbody"><div class="title">✈ EU2853 早班飞伊春（08:15→09:15，<b>¥480×3实查</b>）<span class="tag fun">喂鹿</span></div>
-        <div class="desc">机场取租车 → 升辉早市（买瓜子备着喂松鼠）→ 下午金山鹿苑喂梅花鹿（门票30元/成人）</div>
-        <div class="stay">宿：伊春市区（8/23实查：汉庭¥455 / 天华御景¥249 / 全季¥752）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D3</span><div class="date">8/24 一</div></div>
-        <div class="dbody"><div class="title">五营森林公园 → 汤旺河石林 <span class="tag fun">喂松鼠·小火车</span></div>
-        <div class="desc">73km到五营（80元/人含观光车）：喂松鼠、森林小火车、天赐湖 → 69km到汤旺河（90元/人含观光车）傍晚场</div>
-        <div class="stay">宿：<em>汤旺·亚欧巄城堡酒店 ¥264档</em>（实查）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D4</span><div class="date">8/25 二</div></div>
-        <div class="dbody"><div class="title">嘉荫：恐龙国家地质公园 + 界江游船 <span class="tag fun">恐龙</span><span class="tag move">110km</span></div>
-        <div class="desc">中国第一具恐龙骨架出土地（65元/人）；黄昏坐船看对岸俄罗斯（60元/人·40分钟）</div>
-        <div class="stay">宿：<em>嘉荫屿森 ¥206 / 森澜 ¥322</em>（实查）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D5</span><div class="date">8/26 三</div></div>
-        <div class="dbody"><div class="title">嘉荫 → 五大连池 <span class="tag warn">最长车程日 330km</span></div>
-        <div class="desc">孩子车上午睡；傍晚打卡堰塞湖</div>
-        <div class="stay">宿：五大连池（估 ¥300–450，出票前现查）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D6</span><div class="date">8/27 四</div></div>
-        <div class="dbody"><div class="title">温泊 + 龙门石寨（不赶路）<span class="tag fun">火山石</span></div>
-        <div class="desc">单点购票更省：温泊40元+龙门石寨45元/人（旺季价；联票200元只玩两点不划算）；6岁/1.2米以下儿童免票</div>
-        <div class="stay">宿：五大连池（连住2晚）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D7</span><div class="date">8/28 五</div></div>
-        <div class="dbody"><div class="title">五大连池 → 扎龙 <span class="tag move">300km</span></div>
-        <div class="desc">傍晚湿地散步</div>
-        <div class="stay">宿：扎龙/齐齐哈尔（估 ¥300–450）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D8</span><div class="date">8/29 六</div></div>
-        <div class="dbody"><div class="title">扎龙丹顶鹤放飞 → 还车 → 动车回哈尔滨 <span class="tag fun">观鹤</span></div>
-        <div class="desc">门票65元/人含电瓶车，放飞9:30/11:00/14:00/15:30（夏季）；飞鹤牧场可砍；齐齐哈尔南还车，动车约2h（约¥90/人）</div>
-        <div class="stay">宿：哈尔滨</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D9</span><div class="date">8/30 日</div></div>
-        <div class="dbody"><div class="title">上午东北虎林园 → ✈ 深圳 <span class="tag fun">喂虎喂熊</span><span class="tag fun">里程兑换</span></div>
-        <div class="desc">虎林园110元/人含观光车（1.2米以下免票）→ 南航CZ3634直飞 18:20→23:20 用<b>45,000里程兑3张</b>+税≈¥300（现金¥1,420/人实查——价值9.5分/里程；经停备选长龙¥1,100）</div></div></div>
-    </div>
-  </div>
-
-  <!-- Plan C：8月先哈尔滨 -->
-  <div class="plan plan-c">
-    <div class="plan-head">
-      <h2>Plan C · 8月环线 · 先哈尔滨后咸宁（自驾）</h2>
-      <div class="sub">全家8/14一起飞哈尔滨 → 环线8/14–8/22 → 母子转咸宁休整一周 → 母子8/29高铁回深圳</div>
-      <div class="cost">一家三口 <b>现金≈15,800–17,100元 + 60,000里程</b>（里程价值10.0分/里程·三案最优）</div>
-    </div>
-    <div class="timeline">
-      <div class="day"><div class="dnum"><span class="d">D1</span><div class="date">8/14 五</div></div>
-        <div class="dbody"><div class="title">全家深圳 → ✈ 哈尔滨 <span class="tag fun">里程兑换</span><span class="tag move">直飞4.5h</span></div>
-        <div class="desc">南航直飞 12:10/14:35/17:25 三班可选（推荐14:35班，19:00落地）：<b>45,000里程兑3张</b>+税≈¥150（现金¥1,420/人实查，4.3折——价值9.5分/里程）；晚上中央大街</div>
-        <div class="stay">宿：<em>希尔顿欢朋·中央大街 ¥329档</em>（9月实查，8月略高）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D2</span><div class="date">8/15 六</div></div>
-        <div class="dbody"><div class="title">✈ EU2747 早班飞伊春（08:10→09:10，<b>¥600×3实查</b>）<span class="tag fun">喂鹿</span></div>
-        <div class="desc">机场取租车 → 升辉早市（买瓜子备着喂松鼠）→ 下午金山鹿苑喂梅花鹿（门票30元/成人）</div>
-        <div class="stay">宿：伊春市区（8月旺季 ¥500–700 实查档）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D3</span><div class="date">8/16 日</div></div>
-        <div class="dbody"><div class="title">五营森林公园 → 汤旺河石林 <span class="tag fun">喂松鼠·小火车</span></div>
-        <div class="desc">73km到五营（80元/人含观光车）→ 69km到汤旺河（90元/人含观光车）傍晚场</div>
-        <div class="stay">宿：<em>汤旺·亚欧巄城堡酒店 ¥264档</em>（实查）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D4</span><div class="date">8/17 一</div></div>
-        <div class="dbody"><div class="title">嘉荫：恐龙国家地质公园 + 界江游船 <span class="tag fun">恐龙</span><span class="tag move">110km</span></div>
-        <div class="desc">恐龙骨架出土地（65元/人）；黄昏坐船看对岸俄罗斯（60元/人·40分钟）</div>
-        <div class="stay">宿：<em>嘉荫屿森 ¥206 / 森澜 ¥322</em>（实查）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D5</span><div class="date">8/18 二</div></div>
-        <div class="dbody"><div class="title">嘉荫 → 五大连池 <span class="tag warn">最长车程日 330km</span></div>
-        <div class="desc">孩子车上午睡；傍晚打卡堰塞湖</div>
-        <div class="stay">宿：五大连池（估 ¥300–450，出票前现查）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D6</span><div class="date">8/19 三</div></div>
-        <div class="dbody"><div class="title">温泊 + 龙门石寨（不赶路）<span class="tag fun">火山石</span></div>
-        <div class="desc">单点购票：温泊40+龙门石寨45元/人；6岁/1.2米以下儿童免票</div>
-        <div class="stay">宿：五大连池（连住2晚）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D7</span><div class="date">8/20 四</div></div>
-        <div class="dbody"><div class="title">五大连池 → 扎龙 <span class="tag move">300km</span><span class="tag fun">观鹤</span></div>
-        <div class="desc">下午到可赶14:00/15:30放飞场，赶不上次晨看</div>
-        <div class="stay">宿：扎龙/齐齐哈尔（估 ¥300–450）</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D8</span><div class="date">8/21 五</div></div>
-        <div class="dbody"><div class="title">扎龙放飞（如未看）→ 还车 → 动车回哈尔滨 <span class="tag fun">观鹤</span></div>
-        <div class="desc">扎龙65元/人含电瓶车；齐齐哈尔烤肉+奶砖；齐齐哈尔南还车，动车约2h（约¥90/人）。爸爸假期紧张可当晚18:20先飞回深圳</div>
-        <div class="stay">宿：哈尔滨</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">D9</span><div class="date">8/22 六</div></div>
-        <div class="dbody"><div class="title">分飞日：爸爸回深上班，母子转咸宁 <span class="tag fun">里程兑换</span></div>
-        <div class="desc">爸爸：南航直飞18:20→23:00，<b>15,000里程兑</b>+税≈¥100（现金¥1,750实查——<b>价值11.7分/里程，全行程最高</b>）；妈妈+孩子✈武汉：从容选HU7173 11:05→14:40（¥1,220×2实查）或玩完上午虎林园选南航15:30→19:10（¥1,290×2），高铁转咸宁</div></div></div>
-      <div class="day"><div class="dnum"><span class="d">后置</span><div class="date">8/22–29</div></div>
-        <div class="dbody"><div class="title">妈妈+孩子咸宁居家休整一周 <span class="tag home">零房费</span></div>
-        <div class="desc"><b>8/29(六) 咸宁北→深圳北高铁回深</b>（1大1小≈¥810实查档），隔两天开学，节奏正好收心</div></div></div>
-    </div>
-  </div>
 </div>
 
 <section>
-  <h3>⚖️ Plan B vs Plan C 怎么选（环线内容完全一样，只是咸宁段前后对调）</h3>
-  <div class="card" style="overflow-x:auto">
-    <table>
-      <tr><th>维度</th><th>Plan B · 先咸宁后哈尔滨</th><th>Plan C · 先哈尔滨后咸宁</th></tr>
-      <tr><td>家庭动线</td><td>母子8/14先回咸宁，爸爸8/22单飞会合</td><td><b>全家8/14同进、8/22同出，爸爸不用单飞</b></td></tr>
-      <tr><td>东北段日期</td><td>8/22–8/30</td><td>8/14–8/22</td></tr>
-      <tr><td>孩子节奏</td><td>先居家休整 → 连玩9天 → 8/30到家<b>隔天开学</b></td><td>先连玩9天 → 咸宁收心一周 → 8/29到家<b>从容开学</b></td></tr>
-      <tr><td>现金差</td><td>基准（≈1.51–1.65万）</td><td>约贵600–800元（哈→武白天班¥1,220起 vs 武→哈¥840）</td></tr>
-      <tr><td>里程价值（都用60,000分）</td><td>兑掉现金¥5,610（9.35分/里程）</td><td><b>兑掉现金¥6,010（10.0分/里程）</b></td></tr>
-      <tr><td>爸爸请假窗口</td><td>8/22–8/30（8月中旬正常上班）</td><td>8/14–8/22（严格8天可8/21先回，账基本不变）</td></tr>
-      <tr><td>8/22当天风险点</td><td>两路航班衔接（武汉16:30 + 深圳17:35）</td><td>母子班次取舍：11:05从容 vs 15:30玩完虎林园（约22点到咸宁）</td></tr>
-    </table>
-    <div class="note"><b>一句话：</b>现金差不到一千，核心看两点——①爸爸的假期窗口落在月中还是月底；②想让孩子"先休整后旅行、回来隔天开学"（B）还是"先旅行后收心、提前两天到家"（C）。里程价值和动线顺滑度 C 略优。</div>
+  <h3>🗓️ 订票时间表（今天2026-07-11起算 · 定了哪版就照哪张表执行）</h3>
+  <div class="deadline">⏰ <b>决策截止建议：7月20日前定下走 B 还是 A。</b>原因：①85,000里程只够兑一版，奖励票（8月暑期、9月中秋档）余位只减不增；②B版第一张票（8/14高铁）<b>7月31日</b>就开抢；③EU伊春支线是90座C909小机型每日一班，特价舱最先售罄。<b>南航APP添加受让人（老婆+孩子）不用等决策，现在就办</b>——这是兑奖励票的前置条件，不占任何余位。</div>
+  <div class="vs">
+    <div class="card">
+      <b style="color:var(--green)">若选 Plan B（8月）</b>
+      <table style="margin-top:10px">
+        <tr><th>时间</th><th>动作</th><th>原因</th></tr>
+        <tr><td class="when">现在</td><td>南航APP添加受让人</td><td>兑票前置，生效规则以95539为准</td></tr>
+        <tr><td class="when">决策当天<br>（≤7/20）</td><td><b>立即出两笔里程票</b>：8/22深哈×1（15,000分）＋8/30哈深×3（45,000分）</td><td>暑期奖励票余位不可预测，查到有位就锁；无位看"动态兑换"</td></tr>
+        <tr><td class="when">决策后3天内</td><td>现金机票出票：CZ5627武汉→哈¥840×2；EU2853哈→伊春¥480×3</td><td>3.8–4折特价舱余量少；EU每日一班90座最先涨</td></tr>
+        <tr><td class="when">7月内</td><td>一嗨锁租车（8/23伊春机场取·8/29齐齐哈尔南还，免费取消单）；锁哈尔滨/伊春/汤旺/嘉荫可免费取消酒店</td><td>暑期车源和8月房价只紧不松，免费取消零风险</td></tr>
+        <tr><td class="when">7/31</td><td>12306开抢：深圳北→咸宁北 8/14（1大1小）</td><td>预售期15天，暑期热门线开售即买</td></tr>
+        <tr><td class="when">8/8</td><td>12306：咸宁→武汉城际 8/22</td><td>班次密压力小，顺手买</td></tr>
+        <tr><td class="when">8/12前后</td><td>现查并锁定五大连池8/26–28、扎龙8/28酒店</td><td>两地未实查，按入住日比价</td></tr>
+        <tr><td class="when">8/15</td><td>12306开抢：齐齐哈尔南→哈尔滨 8/29动车×3</td><td>预售期15天</td></tr>
+        <tr><td class="when">8/15–21</td><td>确认扎龙放飞时刻、五大连池开放时间、飞鹤预约；备防蚊虻长袖长裤</td><td>行前收尾</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <b style="color:var(--amber)">若选 Plan A（9月）</b>
+      <table style="margin-top:10px">
+        <tr><th>时间</th><th>动作</th><th>原因</th></tr>
+        <tr><td class="when">现在</td><td>南航APP添加受让人</td><td>兑票前置</td></tr>
+        <tr><td class="when">决策当天<br>（≤7/20）</td><td><b>查并锁 9/26 哈深奖励票×3（45,000分）</b></td><td><b>中秋档（9/25–27）奖励票比平日更紧，是A版最早没位的一张</b>；锁不到改深航9:00早班现金¥1,100×3</td></tr>
+        <tr><td class="when">8月上旬</td><td>现金机票出票：9/19深哈¥540×3；9/25 EU2854伊春→哈¥540×3</td><td>均为4–4.5折低价舱；EU中秋当天班越晚越贵</td></tr>
+        <tr><td class="when">8月下旬</td><td>定伊春包车师傅（4天，¥600/天档，谈好含油费路桥、留20–30%尾款）</td><td>提前2–3周即可，9月平季不抢手</td></tr>
+        <tr><td class="when">8月底–9月初</td><td>锁全程酒店（哈9/19–21、伊春9/21–23、汤旺9/23、嘉荫9/24、哈9/25）</td><td>9月平季价稳，按实查价下单，选免费取消</td></tr>
+        <tr><td class="when">9/7</td><td>12306开抢：K7127 哈尔滨东→伊春 9/21 硬卧×3</td><td>预售期15天；白天车卧铺有限开售即买</td></tr>
+        <tr><td class="when">9/12–18</td><td>盯北线变色进度（伊春文旅公众号/小红书实时帖）、确认游船9月末班次；备抓绒+薄羽绒</td><td>五花山进度每年差3–5天，行前校准</td></tr>
+      </table>
+    </div>
   </div>
+  <div class="note">12306预售期按当前15天规则计算（开售日=乘车日前14天），如有调整以12306当日公告为准；机票价为2026-07-11快照，特价舱先到先得。</div>
 </section>
 
 <section>
   <h3>💰 费用构成对比（一家三口）</h3>
   <div class="vs">
+    <div class="card">
+      <b style="color:var(--green)">Plan B · 8月环线 现金≈15,100–16,500元 + 60,000里程（不用里程≈2.1万）</b>
+      <div class="bars" style="margin-top:8px">
+        <div class="row"><span>大交通现金部分（妻儿高铁+武哈+哈伊+动车）</span><div class="bar"><i style="width:100%"></i></div><span class="amt">≈4,300元</span></div>
+        <div class="row"><span>深哈(爸爸)+哈深(全家) 里程兑换</span><div class="bar"><i style="width:9%"></i></div><span class="amt">60,000分+税≈400元</span></div>
+        <div class="row"><span>租车7天+油费+异地还车（一嗨异地免还车费）</span><div class="bar"><i style="width:79%"></i></div><span class="amt">≈3,400元</span></div>
+        <div class="row"><span>酒店8晚（档次不压）</span><div class="bar"><i style="width:81%"></i></div><span class="amt">≈3,500元</span></div>
+        <div class="row"><span>门票（按官方票价核算，孩子多免票）</span><div class="bar"><i style="width:33%"></i></div><span class="amt">≈1,400元</span></div>
+        <div class="row"><span>餐饮杂项（东北段9天）</span><div class="bar"><i style="width:53%"></i></div><span class="amt">≈2,300元</span></div>
+      </div>
+    </div>
     <div class="card">
       <b style="color:var(--amber)">Plan A · 9月五花山 现金≈11,600–12,400元 + 45,000里程</b>
       <div class="bars a" style="margin-top:8px">
@@ -333,53 +315,27 @@
         <div class="row"><span>餐饮杂项</span><div class="bar"><i style="width:45%"></i></div><span class="amt">≈1,800元</span></div>
       </div>
     </div>
-    <div class="card">
-      <b style="color:var(--green)">Plan B · 先咸宁 现金≈15,100–16,500元 + 60,000里程（不用里程≈2.1万）</b>
-      <div class="bars" style="margin-top:8px">
-        <div class="row"><span>大交通现金部分（妻儿高铁+武哈+哈伊+动车）</span><div class="bar"><i style="width:100%"></i></div><span class="amt">≈4,300元</span></div>
-        <div class="row"><span>深哈(爸爸)+哈深(全家) 里程兑换</span><div class="bar"><i style="width:9%"></i></div><span class="amt">60,000分+税≈400元</span></div>
-        <div class="row"><span>租车7天+油费+异地还车（一嗨异地免还车费）</span><div class="bar"><i style="width:79%"></i></div><span class="amt">≈3,400元</span></div>
-        <div class="row"><span>酒店8晚（档次不压）</span><div class="bar"><i style="width:81%"></i></div><span class="amt">≈3,500元</span></div>
-        <div class="row"><span>门票（按官方票价核算，孩子多免票）</span><div class="bar"><i style="width:33%"></i></div><span class="amt">≈1,400元</span></div>
-        <div class="row"><span>餐饮杂项（东北段9天）</span><div class="bar"><i style="width:53%"></i></div><span class="amt">≈2,300元</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <b style="color:var(--blue)">Plan C · 先哈尔滨 现金≈15,800–17,100元 + 60,000里程</b>
-      <div class="bars c" style="margin-top:8px">
-        <div class="row"><span>大交通现金部分（哈伊+哈武+动车+两段高铁）</span><div class="bar"><i style="width:100%"></i></div><span class="amt">≈5,400元</span></div>
-        <div class="row"><span>深哈(全家)+哈深(爸爸) 里程兑换</span><div class="bar"><i style="width:5%"></i></div><span class="amt">60,000分+税≈250元</span></div>
-        <div class="row"><span>租车7天+油费+异地还车（一嗨异地免还车费）</span><div class="bar"><i style="width:63%"></i></div><span class="amt">≈3,400元</span></div>
-        <div class="row"><span>酒店8晚（档次不压）</span><div class="bar"><i style="width:65%"></i></div><span class="amt">≈3,500元</span></div>
-        <div class="row"><span>门票（按官方票价核算，孩子多免票）</span><div class="bar"><i style="width:26%"></i></div><span class="amt">≈1,400元</span></div>
-        <div class="row"><span>餐饮杂项（东北段9天）</span><div class="bar"><i style="width:43%"></i></div><span class="amt">≈2,300元</span></div>
-      </div>
-    </div>
   </div>
-  <div class="note">条形长度按各自最大项比例绘制，金额取区间中值。B/C门票按官方价核算：虎林园110×2 + 鹿苑30×2 + 五营80×2 + 汤旺河90×2 + 恐龙65×2 + 游船60×3 + 温泊/龙门石寨85×2 + 扎龙65×2 ≈ ¥1,230 + 观光车杂项（孩子6岁/1.2米以下大多免票）。</div>
+  <div class="note">条形长度按各自最大项比例绘制，金额取区间中值。B版门票按官方价核算：虎林园110×2 + 鹿苑30×2 + 五营80×2 + 汤旺河90×2 + 恐龙65×2 + 游船60×3 + 温泊/龙门石寨85×2 + 扎龙65×2 ≈ ¥1,230 + 观光车杂项（孩子6岁/1.2米以下大多免票）。</div>
 </section>
 
 <section>
   <h3>✈️ 机票/火车实查价（携程，2026-07-11，均按实际出行日期查询）</h3>
   <div class="card" style="overflow-x:auto">
     <table>
-      <tr><th>航段/车段</th><th>日期</th><th>班次·时刻</th><th>实查价</th><th>用于</th><th>口径</th></tr>
-      <tr><td>深圳→哈尔滨（全家×3）</td><td><b>8/14</b></td><td>南航直飞 12:10/14:35/17:25 三班 ¥1,420（4.3折）/ 深航¥1,350</td><td class="price">里程兑45,000分</td><td><span class="pc">C</span></td><td><span class="real">实查</span> 价值9.5分/里程</td></tr>
-      <tr><td>哈尔滨→伊春</td><td><b>8/15</b></td><td>成都航空EU2747 · 08:10→09:10</td><td class="price">¥600</td><td><span class="pc">C</span></td><td><span class="real">实查</span> 免机建</td></tr>
-      <tr><td>哈尔滨→深圳（爸爸×1）</td><td><b>8/22</b></td><td>南航直飞 18:20→23:00 ¥1,750（5.3折）/ 长龙经停¥1,211</td><td class="price">里程兑15,000分</td><td><span class="pc">C</span></td><td><span class="real">实查</span> <b>价值11.7分/里程·全程最高</b></td></tr>
-      <tr><td>哈尔滨→武汉（妈妈+孩子×2）</td><td><b>8/22</b></td><td>海航HU7173 11:05→14:40 ¥1,220 / 南航15:30→19:10 ¥1,290</td><td class="price">¥1,220–1,290</td><td><span class="pc">C</span></td><td><span class="real">实查</span> 晚班¥790深夜到，弃</td></tr>
-      <tr><td>深圳北→咸宁北 高铁（双向同价）</td><td>每日17班</td><td>G字头 · 约4.5h</td><td class="price">¥504.5–597（二等）</td><td><span class="pb">B去</span><span class="pc">C回</span></td><td><span class="real">实查</span></td></tr>
-      <tr><td>武汉→哈尔滨（妻儿）</td><td><b>8/22</b></td><td>南航CZ5627 · 16:30→19:40 直飞</td><td class="price">¥840</td><td><span class="pb">B</span></td><td><span class="real">实查</span></td></tr>
-      <tr><td>深圳→哈尔滨（爸爸）</td><td><b>8/22</b></td><td>深航直飞17:35 ¥1,350 / 经停¥1,100起</td><td class="price">里程兑15,000分</td><td><span class="pb">B</span></td><td><span class="real">实查</span> 价值9分/里程</td></tr>
-      <tr><td>哈尔滨→伊春</td><td><b>8/23</b></td><td>成都航空EU2853 · 08:15→09:15</td><td class="price">¥480</td><td><span class="pb">B</span></td><td><span class="real">实查</span> 免机建</td></tr>
-      <tr><td>哈尔滨→深圳（全家）</td><td><b>8/30</b></td><td>南航CZ3634直飞 18:20→23:20 ¥1,420 / 经停长龙¥1,100</td><td class="price">里程兑45,000分</td><td><span class="pb">B</span></td><td><span class="real">实查</span> 价值9.5分/里程</td></tr>
-      <tr><td>深圳→哈尔滨</td><td>9/18–21</td><td>南航直飞多班</td><td class="price">¥540 低价档</td><td><span class="pa">A</span></td><td><span class="real">实查</span> 9/22起涨至¥740–1120</td></tr>
-      <tr><td>哈尔滨东→伊春</td><td>当前运行图</td><td>K7127 · 09:05→15:58 白天车</td><td class="price">硬卧¥123</td><td><span class="pa">A</span></td><td><span class="real">实查</span> 高铁10月才通</td></tr>
-      <tr><td>伊春→哈尔滨</td><td>9/25 中秋</td><td>成都航空EU2854 · 14:50→15:50</td><td class="price">¥540</td><td><span class="pa">A</span></td><td><span class="real">实查</span> 免机建</td></tr>
-      <tr><td>哈尔滨→深圳</td><td>9/26</td><td>深航ZH9624 09:00直飞 ¥1,100 / 南航18:20晚班</td><td class="price">里程兑45,000分</td><td><span class="pa">A</span></td><td><span class="real">实查</span></td></tr>
-      <tr><td>齐齐哈尔南→哈尔滨</td><td>每日多班</td><td>动车 · 约2h</td><td class="price">约¥90</td><td><span class="pb">B</span><span class="pc">C</span></td><td><span class="est">待核实</span></td></tr>
+      <tr><th>航段/车段</th><th>日期</th><th>班次·时刻</th><th>实查价</th><th>口径</th></tr>
+      <tr><td>深圳北→咸宁北 高铁</td><td><b>8/14</b></td><td>G字头每日17班 · 约4.5h</td><td class="price">¥504.5–597（二等）</td><td><span class="real">实查</span> B版妻儿</td></tr>
+      <tr><td>武汉→哈尔滨（妻儿）</td><td><b>8/22</b></td><td>南航CZ5627 · 16:30→19:40 直飞</td><td class="price">¥840</td><td><span class="real">实查</span></td></tr>
+      <tr><td>深圳→哈尔滨（爸爸）</td><td><b>8/22</b></td><td>深航直飞17:35 ¥1,350 / 南航直飞约¥1,420</td><td class="price">里程兑15,000分</td><td><span class="real">实查</span> 价值9分/里程</td></tr>
+      <tr><td>哈尔滨→伊春</td><td><b>8/23</b></td><td>成都航空EU2853 · 08:15→09:15</td><td class="price">¥480</td><td><span class="real">实查</span> 免机建</td></tr>
+      <tr><td>哈尔滨→深圳（全家）</td><td><b>8/30</b></td><td>南航CZ3634直飞 18:20→23:20 ¥1,420 / 经停长龙¥1,100</td><td class="price">里程兑45,000分</td><td><span class="real">实查</span> 价值9.5分/里程</td></tr>
+      <tr><td>齐齐哈尔南→哈尔滨</td><td>8/29</td><td>动车 · 约2h</td><td class="price">约¥90</td><td><span class="est">待核实</span></td></tr>
+      <tr><td>深圳→哈尔滨</td><td>9/18–21</td><td>南航直飞多班</td><td class="price">¥540 低价档</td><td><span class="real">实查</span> 9/22起涨至¥740–1120</td></tr>
+      <tr><td>哈尔滨东→伊春</td><td>9/21</td><td>K7127 · 09:05→15:58 白天车</td><td class="price">硬卧¥123</td><td><span class="real">实查</span> 高铁10月才通</td></tr>
+      <tr><td>伊春→哈尔滨</td><td>9/25 中秋</td><td>成都航空EU2854 · 14:50→15:50</td><td class="price">¥540</td><td><span class="real">实查</span> 免机建</td></tr>
+      <tr><td>哈尔滨→深圳</td><td>9/26</td><td>深航ZH9624 09:00直飞 ¥1,100 / 南航18:20晚班</td><td class="price">里程兑45,000分</td><td><span class="real">实查</span></td></tr>
     </table>
-    <div class="note">已剔除春秋等廉航；夜车全部弃用（保护孩子作息）。儿童机票按民航规定可购成人优惠票。<b>飞猪比价说明：</b>飞猪PC端两次尝试均因需登录/参数校验失败未能抓取——国内机票底层数据同为中航信，平台差价主要在服务包，建议出票前用飞猪App人工比一次总价即可。</div>
+    <div class="note">已剔除春秋等廉航；夜车全部弃用（保护孩子作息）。<b>进伊春路径已比过：</b>伊春林都机场仅通哈尔滨/北京大兴；北京线唯一承运为中联航KN（廉航，¥820–860且要么20:45深夜到、要么大兴过夜赶早班），比经哈尔滨还贵¥100/人——排除；哈尔滨转K7127白天火车可省约¥1,070但报废D2大半天——不推荐。儿童机票按民航规定可购成人优惠票。<b>飞猪比价说明：</b>飞猪PC端两次尝试均因需登录/参数校验失败未能抓取——国内机票底层数据同为中航信，建议出票前用飞猪App人工比一次总价即可。</div>
   </div>
 </section>
 
@@ -393,9 +349,8 @@
       <tr><td>伊春市区（8/23 ⚠️旺季）</td><td>汉庭·百货大楼 ¥455 ｜ 天华御景 ¥249 ｜ 大杉宾馆 ¥356 ｜ 全季·水上公园 <b style="color:var(--red)">¥752</b></td><td class="price" style="color:var(--red)">连锁约9月的2倍</td></tr>
       <tr><td>汤旺河（9/23–24）</td><td>亚欧巄城堡 ¥264 ｜ 林栖宾馆 ¥264 ｜ 森林里的家 ¥216 ｜ 九鑫山珍悦(景区旁) ¥588</td><td class="price">¥216–588</td></tr>
       <tr><td>嘉荫（9/24–25）</td><td>屿森·江边俄罗斯风情园 ¥206 ｜ 森澜·江边公园 ¥322 ｜ 逸云·江边广场 ¥347</td><td class="price">¥206–347</td></tr>
-      <tr><td>五大连池 / 扎龙（B/C版）</td><td>未实查，按同级城镇旺季估算，出票前按实际日期现查</td><td><span class="est">估 ¥300–450</span></td></tr>
+      <tr><td>五大连池 / 扎龙（B版）</td><td>未实查，按同级城镇旺季估算，8/12前后按实际日期现查锁定</td><td><span class="est">估 ¥300–450</span></td></tr>
     </table>
-    <div class="note">8月中旬与下旬同属避暑旺季，B、C 两版酒店预算一致（伊春段按¥500–700/晚）。</div>
   </div>
 </section>
 
@@ -403,7 +358,7 @@
   <h3>🚗 租车/包车行情交叉验证（2026-07-11）</h3>
   <div class="card">
     <ul class="tips">
-      <li><b>B/C版租车（伊春取·齐齐哈尔还）首选一嗨：</b>一嗨主打"全国任意网点免费异地还"（异地单日租金会略贵，要比订单总价）；神州异地还车费为一口价、长线路可达数百至上千元。伊春经济型日租平日约¥100–200，<a href="https://www.tianxun.com/car-hire-from/lds/car-hire-from-yichun-lindu-airport.html" target="_blank">伊春林都机场取车约¥220/天起</a>，暑期上浮——按7天¥3,200–3,600预算（含油费过路）。暑期车源和异地还车线路容易售罄，<b>确定日期立刻在一嗨App锁单</b>。</li>
+      <li><b>B版租车（伊春取·齐齐哈尔还）首选一嗨：</b>一嗨主打"全国任意网点免费异地还"（异地单日租金会略贵，要比订单总价）；神州异地还车费为一口价、长线路可达数百至上千元。伊春经济型日租平日约¥100–200，<a href="https://www.tianxun.com/car-hire-from/lds/car-hire-from-yichun-lindu-airport.html" target="_blank">伊春林都机场取车约¥220/天起</a>，暑期上浮——按7天¥3,200–3,600预算（含油费过路）。暑期车源和异地还车线路容易售罄，<b>确定日期立刻在一嗨App锁单</b>。</li>
       <li><b>A版包车：</b>伊春本地SUV带师傅行情¥500–800/天（9月平季按¥600），低于¥450/天的别接（后面加钱或进购物点）；付款留20–30%尾款行程结束再结。</li>
       <li><b>门票官方价核对：</b>五大连池按<a href="https://drc.hlj.gov.cn/drc/c111493/201810/c00_31467273.shtml" target="_blank">省物价文件</a>单点购票（温泊40+龙门石寨45）比联票200划算；扎龙65含电瓶车、<a href="https://youletour.com/beijing/qi-qi-ha-er-zha-long-zi-ran-bao-hu-qu/goupiao" target="_blank">放飞9:30/11:00/14:00/15:30</a>；<a href="http://heb.bendibao.com/tour/2023130/72625.shtm" target="_blank">虎林园110含观光车</a>，1.2米以下免票。</li>
     </ul>
@@ -413,10 +368,6 @@
 <section>
   <h3>🧾 价格证据截图（携程/Trip.com，2026-07-11 实拍）</h3>
   <div class="evi">
-    <figure><img src="assets/szx-hrb-0814.png" alt="深圳-哈尔滨8/14"><figcaption><b>深圳→哈尔滨 8/14</b> ｜ 南航直飞¥1,420（4.3折）→ Plan C 全家3张用45,000里程兑，价值9.5分/里程</figcaption></figure>
-    <figure><img src="assets/hrb-lds-0815.png" alt="哈尔滨-伊春8/15"><figcaption><b>哈尔滨→伊春 8/15</b> ｜ EU2747早班 ¥600（5折免机建，Plan C）</figcaption></figure>
-    <figure><img src="assets/hrb-szx-0822.png" alt="哈尔滨-深圳8/22"><figcaption><b>哈尔滨→深圳 8/22</b> ｜ 南航直飞18:20 ¥1,750 → Plan C 爸爸用15,000里程兑，<b>价值11.7分/里程全程最高</b></figcaption></figure>
-    <figure><img src="assets/hrb-wuh-0822.png" alt="哈尔滨-武汉8/22"><figcaption><b>哈尔滨→武汉 8/22</b> ｜ 白天班¥1,220起（Plan C 母子）；¥740–790为深夜到汉的晚班，弃用</figcaption></figure>
     <figure><img src="assets/wuh-hrb-0822.png" alt="武汉-哈尔滨8/22"><figcaption><b>武汉→哈尔滨 8/22</b> ｜ 南航CZ5627直飞 ¥840（Plan B 妈妈+孩子）</figcaption></figure>
     <figure><img src="assets/szx-hrb-0822.png" alt="深圳-哈尔滨8/22"><figcaption><b>深圳→哈尔滨 8/22</b> ｜ 直飞现金¥1,350起 → Plan B 爸爸用15,000里程兑，价值9分/里程</figcaption></figure>
     <figure><img src="assets/hrb-lds-0823.png" alt="哈尔滨-伊春8/23"><figcaption><b>哈尔滨→伊春 8/23</b> ｜ EU2853早班 ¥480（免机建，Plan B）</figcaption></figure>
@@ -428,20 +379,17 @@
     <figure><img src="assets/hotel-yichun-0921.png" alt="伊春酒店9月"><figcaption><b>伊春酒店 9/21入住</b> ｜ 全季¥357 / 汉庭¥263 / 4星¥556-677</figcaption></figure>
     <figure><img src="assets/hotel-yichun-0823.png" alt="伊春酒店8月"><figcaption><b>伊春酒店 8/23入住（旺季）</b> ｜ 全季涨到¥752、汉庭¥455——8月连锁约为9月2倍的证据</figcaption></figure>
   </div>
-  <div class="note">截图为2026-07-11查询快照，特价舱位余票有限、价格随时浮动，出票时以平台实时价为准。</div>
+  <div class="note">截图为2026-07-11查询快照，特价舱位余票有限、价格随时浮动，出票时以平台实时价为准。曾评估并排除的路径（Plan C/D、经北京大兴进伊春）的实查记录存档于配套MD文档。</div>
 </section>
 
 <section>
-  <h3>📋 出票前必办清单</h3>
+  <h3>📋 行前最后确认</h3>
   <div class="card">
     <ul class="tips">
-      <li><b>南航里程兑换（85,000分，三案只能选一版兑）：</b><b>选C版</b>——深哈8/14×3（45,000分，9.5分/里程）+ 爸爸哈深8/22×1（15,000分，<b>11.7分/里程</b>），剩25,000分，价值最优；<b>选B版</b>——哈深8/30×3 + 爸爸深哈8/22×1（共60,000分，9.35分/里程）；<b>选A版</b>——兑返程9/26×3（45,000分）。伊春支线EU航班为成都航空承运不可兑。<b>受让人现在就先添加</b>，暑期/中秋奖励票余位紧，确定日期立即锁。</li>
-      <li><b>B/C版租车先锁：</b>一嗨App确认「伊春机场取 · 齐齐哈尔南还」车型与总价，8月暑期车源紧。</li>
-      <li><b>机票一周内出票：</b>¥480/¥540/¥600/¥840/¥1,220均为特价舱；EU2747/EU2853/EU2854每日仅一班（C909小机型90座），伊春段最先出。</li>
-      <li><b>火车票开售即买：</b>预售期约15天——B版深圳北→咸宁北按8/14提前买；C版咸宁北→深圳北按8/29提前买；A版K7127约9月6日开售。</li>
-      <li><b>C版专属：</b>确定8/22母子航班（11:05从容 vs 15:30玩完虎林园再走，价差仅¥70/人）。</li>
-      <li><b>酒店先锁可免费取消的：</b>哈尔滨/伊春/汤旺/嘉荫已有实查价可直接下单；五大连池、扎龙按实际日期现查。</li>
-      <li><b>出发前确认：</b>五大连池各景点开放时间、扎龙放飞时刻、飞鹤牧场是否需预约；孩子带身份证或户口本（酒店/火车/租车实名必查）；8月备防蚊虻长袖长裤，9月备抓绒+薄羽绒（早晚接近0℃）。</li>
+      <li>孩子带身份证或户口本（东北酒店/火车/租车实名必查）。</li>
+      <li>B版：8月备防蚊虻长袖长裤、驱蚊液；A版：9月备抓绒+薄羽绒（早晚接近0℃）。</li>
+      <li>B版出发前确认：五大连池各景点开放时间、扎龙放飞时刻、飞鹤牧场是否需预约。</li>
+      <li>A版出发前确认：五花山变色进度（北线常年9/22–26进入变色期）、界江游船9月末班期。</li>
     </ul>
   </div>
 </section>
@@ -449,7 +397,7 @@
 <footer>
   数据来源（2026-07-11实查快照）：<a href="https://flights.ctrip.com/" target="_blank">携程机票</a> · <a href="https://trains.ctrip.com/" target="_blank">携程火车票</a> · <a href="https://hk.trip.com/hotels/" target="_blank">Trip.com 酒店</a> · <a href="https://drc.hlj.gov.cn/drc/c111493/201810/c00_31467273.shtml" target="_blank">黑龙江省物价文件（五大连池票价）</a> · <a href="http://heb.bendibao.com/tour/2023130/72625.shtm" target="_blank">虎林园票价</a>；
   行程与图片参考：<a href="https://www.xiaohongshu.com/explore/6a0d304b00000000380204f5" target="_blank">小红书《小兴安岭环线亲子游》@Lina集美集合</a>。
-  配套：<code>伊春旅行方案_8月版vs9月版_价格实查.md</code>（完整费用口径）· <code>assets/</code>（证据截图与图片，请与本HTML放在同一目录）。
+  配套：<code>伊春旅行方案_8月版vs9月版_价格实查.md</code>（完整费用口径 + 已排除方案存档）· <code>assets/</code>（证据截图与图片，请与本HTML放在同一目录）。
 </footer>
 
 </div>
