@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>小兴安岭 8 天亲子行程 · 2026年8月</title>
+<style>
+:root{
+  --forest:#1b4332; --moss:#2d6a4f; --sage:#52b788; --mist:#d8f3dc;
+  --amber:#e8a33d; --clay:#c1502e; --ink:#1a1a1a; --gray:#6b7280;
+  --paper:#fdfcf8; --line:#e5e3dc;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75; -webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* ── 封面 ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  align-items:center;text-align:center;padding:40px 24px;position:relative;
+  background:linear-gradient(160deg,#1b4332 0%,#2d6a4f 55%,#40916c 100%);color:#fff;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;opacity:.13;
+  background-image:radial-gradient(circle at 18% 30%,#fff 1.5px,transparent 1.6px),
+  radial-gradient(circle at 72% 65%,#fff 1px,transparent 1.1px);background-size:130px 130px,90px 90px}
+.hero>*{position:relative;z-index:2}
+.hero .kicker{font-size:13px;letter-spacing:.42em;opacity:.8;margin-bottom:26px;text-transform:uppercase}
+.hero h1{font-size:clamp(40px,8.5vw,78px);font-weight:800;letter-spacing:.05em;line-height:1.12}
+.hero .sub{font-size:clamp(15px,2.4vw,19px);opacity:.9;margin-top:20px;font-weight:300;letter-spacing:.08em}
+.headline{margin:44px auto 0;max-width:660px;background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.28);border-radius:16px;padding:26px 30px;backdrop-filter:blur(8px)}
+.headline .big{font-size:clamp(28px,5.5vw,44px);font-weight:800;letter-spacing:.02em}
+.headline .big small{font-size:.44em;font-weight:400;opacity:.85;letter-spacing:.05em}
+.headline .note{font-size:14px;opacity:.82;margin-top:10px}
+.stats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  border-radius:12px;padding:14px 22px;min-width:104px}
+.stat b{display:block;font-size:26px;font-weight:700}
+.stat span{font-size:12px;opacity:.78;letter-spacing:.1em}
+.scroll{margin-top:52px;font-size:12px;opacity:.7;letter-spacing:.22em;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(9px)}}
+
+/* ── 通用 ── */
+section{max-width:1080px;margin:0 auto;padding:82px 24px}
+.sec-label{font-size:12px;letter-spacing:.34em;color:var(--sage);font-weight:600;margin-bottom:12px}
+h2{font-size:clamp(26px,4.6vw,38px);font-weight:800;color:var(--forest);
+  letter-spacing:.02em;margin-bottom:14px;line-height:1.3}
+.lead{font-size:16px;color:var(--gray);max-width:660px;margin-bottom:38px}
+.verdict{background:#fff;border-left:5px solid var(--sage);border-radius:0 12px 12px 0;
+  padding:22px 26px;margin:26px 0;box-shadow:0 2px 14px rgba(27,67,50,.07)}
+.verdict strong{color:var(--forest)}
+
+/* ── 地图 ── */
+.mapwrap{background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:26px 20px;box-shadow:0 4px 22px rgba(27,67,50,.07);overflow-x:auto}
+svg.routemap{width:100%;min-width:620px;height:auto;display:block}
+.legend{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;padding-top:18px;
+  border-top:1px dashed var(--line);font-size:13px;color:var(--gray)}
+.legend i{display:inline-block;width:22px;height:3px;border-radius:2px;
+  margin-right:7px;vertical-align:middle}
+.legend .dotm{width:11px;height:11px;border-radius:50%}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">2026 · 暑期 · 小兴安岭</div>
+  <h1>林海八日</h1>
+  <div class="sub">哈尔滨 — 伊春 — 嘉荫 · 8月21日 → 8月28日 · 全家同进同出</div>
+  <div class="headline">
+    <div class="big">¥18,290 <small>纯现金</small></div>
+    <div class="note">三人全含 · 深圳直飞往返，不再分头出发，本次未用里程（余额 80,000 留着）</div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>8</b><span>天</span></div>
+    <div class="stat"><b>7</b><span>晚</span></div>
+    <div class="stat"><b>6</b><span>天年假</span></div>
+    <div class="stat"><b>700</b><span>公里</span></div>
+  </div>
+  <div class="scroll">向下滚动</div>
+</div>
+
+<section>
+  <div class="sec-label">路线全图</div>
+  <h2>八天怎么走</h2>
+  <p class="lead">深圳直飞哈尔滨，玩两天转飞伊春，沿小兴安岭一路向北推到中俄界江嘉荫，
+  再折返伊春飞回哈尔滨转深圳。全程不走回头路，自驾约 700 公里。</p>
+
+  <div class="mapwrap">
+  <svg class="routemap" viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="air" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#e8a33d"/><stop offset="100%" stop-color="#c1502e"/>
+      </linearGradient>
+      <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="3"
+        orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,6 L8,3 z" fill="#2d6a4f"/>
+      </marker>
+    </defs>
+
+    <!-- 底图色块：小兴安岭林区 -->
+    <path d="M250,70 Q470,30 700,85 Q790,150 760,300 Q700,420 480,440 Q290,420 235,290 Q215,160 250,70 Z"
+      fill="#e9f5ec" stroke="#c9e4d2" stroke-width="1.5"/>
+    <text x="392" y="126" font-size="13" fill="#a8c9b4" letter-spacing="5">小 兴 安 岭 林 区</text>
+
+    <!-- 黑龙江（界江） -->
+    <path d="M600,74 Q690,96 742,150 Q784,206 806,268" fill="none"
+      stroke="#8ecae6" stroke-width="7" stroke-linecap="round" opacity=".62"/>
+    <text x="742" y="112" font-size="11.5" fill="#5f9ea0" transform="rotate(37 742 112)">黑龙江 · 中俄界江</text>
+
+    <!-- 陆路：伊春向北推进 -->
+    <path d="M404,332 L360,268" stroke="#52b788" stroke-width="3.4" fill="none" marker-end="url(#arw)"/>
+    <path d="M404,332 L470,300" stroke="#52b788" stroke-width="3.4" fill="none" marker-end="url(#arw)"/>
+    <path d="M404,332 L452,214" stroke="#2d6a4f" stroke-width="3.6" fill="none" marker-end="url(#arw)"/>
+    <path d="M452,214 Q580,150 690,132" stroke="#2d6a4f" stroke-width="3.6" fill="none" marker-end="url(#arw)"/>
+    <path d="M690,132 Q560,300 412,338" stroke="#2d6a4f" stroke-width="2.4"
+      fill="none" stroke-dasharray="8 6" opacity=".72" marker-end="url(#arw)"/>
+
+    <!-- 空中：深圳 → 哈尔滨 → 伊春 -->
+    <path d="M150,520 Q210,430 300,404" stroke="url(#air)" stroke-width="3.2"
+      fill="none" stroke-dasharray="11 7"/>
+    <path d="M300,404 Q345,372 400,340" stroke="url(#air)" stroke-width="3.2"
+      fill="none" stroke-dasharray="11 7"/>
+
+    <!-- 节点 -->
+    <g font-family="PingFang SC,Microsoft YaHei" font-size="13.5">
+      <!-- 深圳 出发 -->
+      <circle cx="150" cy="520" r="8.5" fill="#c1502e"/>
+      <text x="166" y="518" font-weight="700" fill="#1a1a1a">深圳</text>
+      <text x="166" y="536" font-size="11.5" fill="#6b7280">8/21 三人一起出发</text>
+
+      <!-- 哈尔滨 -->
+      <circle cx="300" cy="404" r="12" fill="#1b4332"/>
+      <circle cx="300" cy="404" r="20" fill="none" stroke="#1b4332" stroke-width="1.4" opacity=".35"/>
+      <text x="200" y="386" font-weight="800" font-size="16" fill="#1b4332">哈尔滨</text>
+      <text x="192" y="404" font-size="11.5" fill="#6b7280">D1–D2 · 2 晚</text>
+      <text x="176" y="421" font-size="11" fill="#52b788">虎林园 · 中央大街</text>
+
+      <!-- 伊春 -->
+      <circle cx="404" cy="336" r="12" fill="#1b4332"/>
+      <circle cx="404" cy="336" r="20" fill="none" stroke="#1b4332" stroke-width="1.4" opacity=".35"/>
+      <text x="418" y="352" font-weight="800" font-size="16" fill="#1b4332">伊春</text>
+      <text x="418" y="370" font-size="11.5" fill="#6b7280">基地 · 租车起点</text>
+
+      <!-- 溪水公园 -->
+      <circle cx="360" cy="268" r="7" fill="#52b788"/>
+      <text x="256" y="258" font-size="12.5" font-weight="600" fill="#2d6a4f">溪水公园</text>
+      <text x="262" y="274" font-size="11" fill="#6b7280">D3 溯溪</text>
+
+      <!-- 金山鹿苑 -->
+      <circle cx="470" cy="300" r="7" fill="#52b788"/>
+      <text x="484" y="298" font-size="12.5" font-weight="600" fill="#2d6a4f">金山鹿苑</text>
+      <text x="484" y="314" font-size="11" fill="#6b7280">D4 喂梅花鹿</text>
+
+      <!-- 五营 -->
+      <circle cx="452" cy="214" r="8" fill="#40916c"/>
+      <text x="466" y="208" font-size="12.5" font-weight="600" fill="#2d6a4f">五营森林公园</text>
+      <text x="466" y="224" font-size="11" fill="#6b7280">D5 木屋 · 喂松鼠</text>
+
+      <!-- 嘉荫 -->
+      <circle cx="690" cy="132" r="10" fill="#c1502e"/>
+      <circle cx="690" cy="132" r="18" fill="none" stroke="#c1502e" stroke-width="1.4" opacity=".4"/>
+      <text x="616" y="112" font-size="14" font-weight="800" fill="#c1502e">嘉荫</text>
+      <text x="616" y="129" font-size="11" fill="#6b7280">D6 捡玛瑙 · 界江</text>
+    </g>
+
+    <!-- 折返标注 -->
+    <text x="500" y="296" font-size="11" fill="#6b7280" opacity=".8"
+      transform="rotate(-19 500 296)">D7 折返 230km → 伊春机场</text>
+    <text x="196" y="470" font-size="11" fill="#c1502e" opacity=".85"
+      transform="rotate(-31 196 470)">✈ 8/28 哈尔滨 → 深圳</text>
+  </svg>
+
+  <div class="legend">
+    <span><i style="background:linear-gradient(90deg,#e8a33d,#c1502e)"></i>飞机</span>
+    <span><i style="background:#2d6a4f"></i>自驾主线（北上）</span>
+    <span><i style="background:#2d6a4f;opacity:.5"></i>自驾折返</span>
+    <span><i class="dotm" style="background:#52b788"></i>伊春近郊当日往返</span>
+    <span><i class="dotm" style="background:#c1502e"></i>最北端 / 进出港</span>
+  </div>
+  </div>
+</section>
+<style>
+.days{display:flex;flex-direction:column;gap:22px}
+.day{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  display:grid;grid-template-columns:186px 1fr;box-shadow:0 2px 14px rgba(27,67,50,.06);
+  transition:transform .25s ease,box-shadow .25s ease}
+.day:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(27,67,50,.13)}
+.day .pic{position:relative;background:var(--mist);min-height:172px}
+.day .pic .tag{position:absolute;left:0;top:0;background:var(--forest);color:#fff;
+  font-size:12px;font-weight:700;padding:6px 13px;letter-spacing:.06em;border-radius:0 0 10px 0}
+.day .body{padding:22px 26px}
+.day .date{font-size:12px;color:var(--sage);font-weight:700;letter-spacing:.14em;margin-bottom:5px}
+.day h3{font-size:19px;color:var(--forest);font-weight:800;margin-bottom:9px}
+.day p{font-size:14.5px;color:#40484f}
+.day .chips{margin-top:13px;display:flex;gap:7px;flex-wrap:wrap}
+.chip{font-size:11.5px;background:var(--mist);color:var(--moss);
+  padding:4px 11px;border-radius:20px;font-weight:600}
+.chip.kid{background:#fff3e0;color:#b06f16}
+.chip.move{background:#eef2f7;color:#5a6b80}
+@media(max-width:720px){.day{grid-template-columns:1fr}.day .pic{min-height:190px}}
+</style>
+
+<section style="background:#f6f8f5;max-width:none">
+<div style="max-width:1080px;margin:0 auto">
+  <div class="sec-label">逐日安排</div>
+  <h2>每天玩什么</h2>
+  <p class="lead">两位大人都要请 <b>6 天</b>年假（8月21日、8月24–28日），中间只夹 8/22–23 一个周末。
+  比上一版的"母子先去咸宁、爸爸单独会合"简单很多——三人一起出发，一起回家，
+  代价是这次不走咸宁段，行程也从 9 天压到 8 天，砍掉了汤旺河一天。</p>
+
+  <div class="days">
+
+    <div class="day">
+      <div class="pic"><span class="tag">D1</span><img src="assets-y8/harbin-street-1.jpg" alt="哈尔滨中央大街"></div>
+      <div class="body">
+        <div class="date">8月21日 · 周五</div>
+        <h3>深圳出发，三人一起飞哈尔滨</h3>
+        <p>南航 CZ3633 深圳直飞哈尔滨，12:10 起飞、16:35 落地。不用再分头会合，
+        下午到了直接去中央大街逛，索菲亚教堂广场喂鸽子，吃根马迭尔冰棍。</p>
+        <div class="chips"><span class="chip move">✈ 全家同机</span><span class="chip">中央大街</span><span class="chip">索菲亚教堂</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="pic"><span class="tag">D2</span><img src="assets-y8/tiger-close.webp" alt="东北虎林园"></div>
+      <div class="body">
+        <div class="date">8月22日 · 周六</div>
+        <h3>东北虎林园 + 极地公园</h3>
+        <p>上午坐防护车进虎园，隔着铁网看东北虎，孩子的第一个尖叫点。
+        下午极地馆看白鲸和企鹅表演。</p>
+        <div class="chips"><span class="chip kid">🐯 孩子高光</span><span class="chip">东北虎林园</span><span class="chip">极地公园</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="pic"><span class="tag">D3</span><img src="assets-y8/xishui-suxi.webp" alt="溪水国家森林公园溯溪"></div>
+      <div class="body">
+        <div class="date">8月23日 · 周日</div>
+        <h3>飞伊春 → 溪水公园溯溪</h3>
+        <p>上午飞林都机场，机场提车。下午去上甘岭溪水国家森林公园，
+        沿溪走栈道，孩子可以下水踩石头。全程平缓，不累。</p>
+        <div class="chips"><span class="chip move">✈ 转场伊春</span><span class="chip move">🚗 取车</span><span class="chip kid">💧 玩水</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="pic"><span class="tag">D4</span><img src="assets-y8/jinshan-deer.jpg" alt="金山鹿苑梅花鹿"></div>
+      <div class="body">
+        <div class="date">8月24日 · 周一</div>
+        <h3>金山鹿苑整天</h3>
+        <p>小鹿温顺，手里有零食就会围上来。园区草坪开阔，还有蹦床和烤肉营地，
+        整天泡在这里不会闷。往返约 120 公里。</p>
+        <div class="chips"><span class="chip kid">🦌 亲手喂鹿</span><span class="chip">蹦床营地</span><span class="chip">烤肉</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="pic"><span class="tag">D5</span><img src="assets-y8/wuying-park-2.jpg" alt="五营国家森林公园红松林"></div>
+      <div class="body">
+        <div class="date">8月25日 · 周二</div>
+        <h3>五营森林公园 · 住景区木屋</h3>
+        <p>中国面积最大的红松原始林。坐观光小火车穿林海，投喂小松鼠。
+        <strong>瓜子一定在市区先买</strong>，园内价格贵不少。当晚住景区内木屋。</p>
+        <div class="chips"><span class="chip kid">🐿 喂松鼠</span><span class="chip">红松原始林</span><span class="chip">🏡 林中木屋</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="pic"><span class="tag">D6</span><img src="assets-y8/maonao-baby.webp" alt="嘉荫捡玛瑙"></div>
+      <div class="body">
+        <div class="date">8月26日 · 周三</div>
+        <h3>嘉荫 · 捡玛瑙 + 界江游船</h3>
+        <p>乌云河桥下的河滩捡玛瑙，真能捡到。界碑旁也有原石卖，3–5 元一颗。
+        下午坐界江游船，对岸就是俄罗斯。这天是全程最北端。</p>
+        <div class="chips"><span class="chip kid">💎 捡玛瑙</span><span class="chip">中俄界江</span><span class="chip">恐龙地质公园</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="pic"><span class="tag">D7</span><img src="assets-y8/jiayin-heilongjiang-1.jpg" alt="黑龙江界江风光"></div>
+      <div class="body">
+        <div class="date">8月27日 · 周四</div>
+        <h3>折返伊春 → 飞哈尔滨</h3>
+        <p>上午在嘉荫再捡一轮玛瑙，中午出发跑 230 公里回伊春还车，
+        下午飞哈尔滨，住机场附近。</p>
+        <div class="chips"><span class="chip move">🚗 230km 折返</span><span class="chip move">🚗 还车</span><span class="chip move">✈ 飞哈尔滨</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="pic"><span class="tag">D8</span><img src="assets-y8/harbin-street-2.jpg" alt="哈尔滨"></div>
+      <div class="body">
+        <div class="date">8月28日 · 周五</div>
+        <h3>09:05 飞回深圳</h3>
+        <p>南航 CZ6273，13:30 落地宝安。白天航班，到家还有半天缓冲，
+        第二天不至于全家瘫着。开学前留了三天缓冲。</p>
+        <div class="chips"><span class="chip move">✈ 白天航班</span><span class="chip">13:30 到家</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+<style>
+.cards2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 28px;position:relative}
+.card.win{border:2px solid var(--sage);box-shadow:0 6px 26px rgba(82,183,136,.18)}
+.card .badge{position:absolute;top:-11px;left:26px;background:var(--sage);color:#fff;
+  font-size:11px;font-weight:700;padding:4px 13px;border-radius:20px;letter-spacing:.1em}
+.card h3{font-size:20px;color:var(--forest);font-weight:800;margin-bottom:4px}
+.card .price{font-size:31px;font-weight:800;color:var(--forest);margin:12px 0 2px}
+.card .price small{font-size:.42em;font-weight:400;color:var(--gray)}
+.card ul{list-style:none;margin-top:16px}
+.card li{font-size:14px;padding:7px 0 7px 22px;position:relative;border-bottom:1px dashed #eee;color:#40484f}
+.card li:last-child{border:none}
+.card li.y::before{content:"✓";position:absolute;left:0;color:var(--sage);font-weight:800}
+.card li.n::before{content:"✕";position:absolute;left:0;color:var(--clay);font-weight:800}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;
+  overflow:hidden;margin-top:26px;font-size:14.5px;box-shadow:0 2px 14px rgba(27,67,50,.06)}
+th{background:var(--forest);color:#fff;padding:14px 16px;text-align:left;
+  font-weight:600;font-size:13px;letter-spacing:.06em}
+td{padding:13px 16px;border-bottom:1px solid #f0efe9}
+tbody tr:last-child td{border:none}
+tbody tr:hover{background:#fafcf9}
+td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+tr.total td{background:var(--mist);font-weight:800;color:var(--forest);font-size:15.5px}
+.warn{background:#fff8ec;border-left:5px solid var(--amber);border-radius:0 12px 12px 0;
+  padding:20px 24px;margin-top:24px;font-size:14.5px;color:#6b5320}
+.warn b{color:#8a5a00}
+@media(max-width:720px){.cards2{grid-template-columns:1fr}}
+</style>
+
+<section>
+  <div class="sec-label">自驾还是包车</div>
+  <h2>车怎么解决</h2>
+  <p class="lead">伊春的景点分散在 50–100 公里开外，公交基本为零，这一段必须有车。
+  用车区间是 8月23日–27日，共 5 天、约 700 公里（比上一版少一天，因为砍掉了汤旺河那段往返）。</p>
+
+  <div class="cards2">
+    <div class="card win">
+      <div class="badge">推荐</div>
+      <h3>自驾租车</h3>
+      <div style="font-size:13px;color:var(--gray)">悟空 / 神州 · SUV · 机场取还</div>
+      <div class="price">≈¥1,700 <small>5天</small></div>
+      <ul>
+        <li class="y">按上版 6 天 ¥1,880–2,480 的日均值折算，未重新报价</li>
+        <li class="y">景点全有停车场，路不难开</li>
+        <li class="y">时间自由，孩子累了随时返程</li>
+        <li class="y">车上能堆零食和换洗衣物</li>
+        <li class="n">押金冻结 ¥2,000–5,000</li>
+        <li class="n">700 公里全靠自己开</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>包车带司机</h3>
+      <div style="font-size:13px;color:var(--gray)">7–9 座商务车 · 一价全含</div>
+      <div class="price">≈¥3,000–4,000 <small>5天</small></div>
+      <ul>
+        <li class="y">不用开车，全程能陪孩子</li>
+        <li class="y">司机熟路，油费过路费都含</li>
+        <li class="y">嘉荫段颠簸路面交给专业的</li>
+        <li class="n">贵出一晚好酒店还不止</li>
+        <li class="n">行程要跟司机商量，不够随性</li>
+        <li class="n">跨市住嘉荫可能加住宿补贴</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <strong>结论：沿用上版判断，仍选租车自驾。</strong>走过这条线的人明确说过
+    「景点全有停车场，路也不难开」，只是这次没有重新问价，按天数比例折算了一个估值。
+  </div>
+
+  <div class="warn">
+    <b>一个带娃家庭的真实吐槽：</b>同样是亲子自驾走这条线，对方的总结是
+    「各个景点距离很远，长时间连续开车非常考验耐力」，还踩过两个坑——
+    走铁力经乌带公路去金山鹿苑要 <b>足足 4 小时</b>连绵弯道（直接走铁力→金山鹿苑就好，
+    乌带公路只有一处打卡牌，不值得专程跑）；嘉荫捡玛瑙那段
+    <b>一半道路在施工</b>，路面颠簸。本行程每天车程仍压在 2 小时内，
+    最长的 230 公里折返单独占掉 D7 一整天，不叠加景点。
+  </div>
+
+  <table>
+    <thead><tr><th>用车方式</th><th>明细</th><th class="num">5 天合计</th></tr></thead>
+    <tbody>
+      <tr><td>自驾租车</td><td>按上版 SUV ¥200–300/天 + 油 + 停车折算</td><td class="num">≈¥1,700</td></tr>
+      <tr><td>包车带司机</td><td>按上版 ¥600–800/天折算，仅供参考</td><td class="num">≈¥3,000–4,000</td></tr>
+      <tr class="total"><td>选定方案</td><td>全程自驾租车，机场取还</td><td class="num">≈¥1,700</td></tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:20px;font-size:13.5px;color:var(--gray)">
+    这版没有重新问租车行情，是按天数比例从上一版实查数据折算的估值，实际下单前建议再问一次价。
+  </div>
+</section>
+<style>
+.bar{display:flex;height:38px;border-radius:10px;overflow:hidden;margin:26px 0 10px;
+  box-shadow:0 2px 10px rgba(27,67,50,.1)}
+.bar div{display:flex;align-items:center;justify-content:center;color:#fff;
+  font-size:12.5px;font-weight:700;letter-spacing:.04em}
+.barkey{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--gray)}
+.barkey span i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px}
+.mile{background:linear-gradient(135deg,#1b4332,#2d6a4f);color:#fff;border-radius:18px;
+  padding:32px 34px;margin-top:30px}
+.mile h3{font-size:21px;font-weight:800;margin-bottom:6px}
+.mile .msub{font-size:14px;opacity:.82;margin-bottom:22px}
+.mile table{background:transparent;box-shadow:none;margin:0;color:#fff}
+.mile th{background:rgba(255,255,255,.14);color:#fff}
+.mile td{border-bottom:1px solid rgba(255,255,255,.14);color:#eaf5ee}
+.mile tr.total td{background:rgba(255,255,255,.16);color:#fff}
+</style>
+
+<section style="background:#f6f8f5;max-width:none">
+<div style="max-width:1080px;margin:0 auto">
+  <div class="sec-label">钱怎么花</div>
+  <h2>¥18,290 是怎么来的</h2>
+  <p class="lead">三个人、八天、全程同进同出。不再有咸宁段和高铁票，
+  机票全部是 2026-07-28 携程实查的深圳/伊春/哈尔滨往返票价。</p>
+
+  <div class="bar">
+    <div style="width:54%;background:#1b4332">机票 54%</div>
+    <div style="width:12%;background:#2d6a4f">住宿 12%</div>
+    <div style="width:25%;background:#40916c">吃饭门票 25%</div>
+    <div style="width:9%;background:#52b788">租车油费 9%</div>
+  </div>
+  <div class="barkey">
+    <span><i style="background:#1b4332"></i>现金机票 ¥9,900</span>
+    <span><i style="background:#2d6a4f"></i>住宿 7 晚 ¥2,190</span>
+    <span><i style="background:#40916c"></i>吃饭门票玩乐 ≈¥4,500</span>
+    <span><i style="background:#52b788"></i>租车油费 ≈¥1,700</span>
+  </div>
+
+  <table>
+    <thead><tr><th>项目</th><th>说明</th><th class="num">金额</th></tr></thead>
+    <tbody>
+      <tr><td>现金机票</td><td>深圳↔哈尔滨、哈尔滨↔伊春 三人往返 4 段</td><td class="num">¥9,900</td></tr>
+      <tr><td>住宿</td><td>7 晚 · 6 晚实查 + 1 晚预留</td><td class="num">¥2,190</td></tr>
+      <tr><td>租车 + 油费</td><td>5 天 SUV + 700km 油费 + 停车（估算，未重新报价）</td><td class="num">≈¥1,700</td></tr>
+      <tr><td>吃饭 · 门票 · 玩乐</td><td>8 天 × 三人（按上版日均折算，偏保守）</td><td class="num">≈¥4,500</td></tr>
+      <tr class="total"><td>实际现金支出</td><td>本次 0 里程使用</td><td class="num">≈¥18,290</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:19px;color:var(--forest);margin:38px 0 4px">住宿逐晚实价</h3>
+  <p style="font-size:14px;color:var(--gray);margin-bottom:0">
+  2026年7月28日携程实查，页面按 2 成人口径显示价格（6 岁儿童通常不加床不加价，未逐一验证）。含钻石贵宾折扣，普通用户查到的会略高。</p>
+  <table>
+    <thead><tr><th>入住</th><th>城市</th><th>酒店</th><th class="num">价格</th><th>口径</th></tr></thead>
+    <tbody>
+      <tr><td>8/21</td><td>哈尔滨·中央大街</td><td>橙居智慧（含早）</td><td class="num">¥297</td><td>实查</td></tr>
+      <tr><td>8/22</td><td>哈尔滨·中央大街</td><td>龍瑞程酒店(中央大街店)</td><td class="num">¥278</td><td>实查</td></tr>
+      <tr><td>8/23</td><td>伊春市区</td><td>伊春如家艾扉酒店（4.7分·含早）</td><td class="num">¥420</td><td>实查</td></tr>
+      <tr><td>8/24</td><td>伊春市区</td><td>同上</td><td class="num">¥359</td><td>实查</td></tr>
+      <tr style="background:#fffdf5"><td>8/25</td><td>五营·景区内</td><td>绿野仙居木屋 <small style="color:var(--amber)">需电话订</small></td><td class="num">¥400</td><td>预留</td></tr>
+      <tr><td>8/26</td><td>嘉荫·江边</td><td>屿森酒店（江边公园俄罗斯风情园店）</td><td class="num">¥158</td><td>实查</td></tr>
+      <tr><td>8/27</td><td>哈尔滨</td><td>龍瑞程酒店(中央大街店)</td><td class="num">¥278</td><td>实查</td></tr>
+      <tr class="total"><td colspan="3">7 晚合计（6 晚实查 ¥1,790 + 1 晚预留 ¥400）</td><td class="num">¥2,190</td><td></td></tr>
+    </tbody>
+  </table>
+  <div style="margin-top:16px;font-size:13.5px;color:var(--gray)">
+  ⚠️ 伊春如家艾扉这两晚比上一版查到的贵不少（上版两晚合计 ¥359，这版两晚合计 ¥779）——
+  8/23 是周日，需求更高，涨价基本是日期差异导致，不是同一天比价出错。
+  </div>
+
+  <div class="mile">
+    <h3>这次为什么没用里程</h3>
+    <div class="msub">余额 80,000，问题不是够不够额度，是三人同行后单程要花的里程翻了三倍。</div>
+    <table>
+      <thead><tr><th>情况</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>三人同行的里程需求</td><td>单程按 3 人份计算，两程加起来大概率超过 80,000 余额，凑不齐两段都兑</td></tr>
+        <tr><td>8/28 CZ6273 返程</td><td>和上一版同航班同价，大概率仍可兑（上版约 45,000 里程+¥450 税/3人），<b>但这个数字是沿用推断，没有针对 8/28 重新在南航 APP 核实</b></td></tr>
+        <tr class="total"><td>建议</td><td>愿意的话自己查一下 8/28 三人份兑换情况，够 5-6 分/里程的合理线就换，省下的钱直接从总账扣</td></tr>
+      </tbody>
+    </table>
+    <div style="margin-top:20px;font-size:13.5px;opacity:.88;line-height:1.8">
+      80,000 里程本次不动，留着以后有单人出行或额度够用的场景再兑，比现在勉强凑数划算。
+    </div>
+  </div>
+
+  <div class="warn" style="margin-top:28px">
+    <b>一个仍然成立的省钱提醒：</b>哈尔滨↔伊春那段，携程会同时显示成都航空 EU2853/EU2748、
+    川航/长龙/西藏/南航等几个代码，<b>全是同一架飞机</b>，实际承运人始终是成都航空。
+    挂其他航司代码的那些贵 ¥50–110，而且不能兑里程——直接买成都航空本号。
+  </div>
+</div>
+</section>
+<style>
+.todo{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 24px;
+  display:grid;grid-template-columns:44px 1fr auto;gap:18px;align-items:center}
+.item .no{width:34px;height:34px;border-radius:50%;background:var(--forest);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.item.urgent{border-left:5px solid var(--clay)}
+.item.urgent .no{background:var(--clay)}
+.item h4{font-size:16px;color:var(--forest);font-weight:700;margin-bottom:3px}
+.item p{font-size:13.5px;color:var(--gray)}
+.item .when{font-size:12px;font-weight:700;color:var(--clay);white-space:nowrap;
+  background:#fdeee9;padding:6px 12px;border-radius:20px}
+.item .when.soon{color:var(--moss);background:var(--mist)}
+.gap{background:#fff;border:1px dashed #c9c6ba;border-radius:14px;padding:24px 26px;margin-top:26px}
+.gap h4{font-size:15px;color:#8a5a00;font-weight:800;margin-bottom:10px}
+.gap p{font-size:14px;color:#5a5a52;margin-bottom:9px}
+footer{background:var(--forest);color:#cfe6d8;text-align:center;padding:50px 24px;font-size:13px}
+footer b{color:#fff;display:block;font-size:15px;margin-bottom:8px}
+@media(max-width:720px){.item{grid-template-columns:36px 1fr}.item .when{grid-column:2}}
+</style>
+
+<section>
+  <div class="sec-label">现在要做的事</div>
+  <h2>四件事，按顺序办</h2>
+  <p class="lead">这版没有里程票要抢，四段现金票和租车、木屋预订是接下来的重点。</p>
+
+  <div class="todo">
+    <div class="item urgent">
+      <div class="no">1</div>
+      <div>
+        <h4>出四段现金机票</h4>
+        <p>8/21 CZ3633 深圳→哈尔滨 ×3、8/23 EU2853 哈尔滨→伊春 ×3、
+        8/27 EU2748 伊春→哈尔滨 ×3、8/28 CZ6273 哈尔滨→深圳 ×3。</p>
+      </div>
+      <div class="when">今天</div>
+    </div>
+
+    <div class="item">
+      <div class="no">2</div>
+      <div>
+        <h4>想用里程的话，先在南航APP查一下</h4>
+        <p>查 8/28 CZ6273 三人份的兑换情况，值不值得换（够 5-6 分/里程的合理线再换）。</p>
+      </div>
+      <div class="when soon">出票前</div>
+    </div>
+
+    <div class="item">
+      <div class="no">3</div>
+      <div>
+        <h4>提前 5 天订租车</h4>
+        <p>旺季车少。悟空/神州租车，伊春机场取还，SUV，8/23 取车、8/27 还车。</p>
+      </div>
+      <div class="when soon">8月18日前</div>
+    </div>
+
+    <div class="item">
+      <div class="no">4</div>
+      <div>
+        <h4>电话订五营绿野仙居木屋</h4>
+        <p>这晚携程订不到，需要电话订（住进去后同一张门票次日还能用）。
+        订的时候问一句有没有加湿器——林区夜里干。</p>
+      </div>
+      <div class="when soon">8月中旬</div>
+    </div>
+  </div>
+
+  <div class="gap">
+    <h4>还没落实的项，如实说明</h4>
+    <p><b>这版把"母子先去咸宁、爸爸单独会合"改成了三人一起出发一起回家</b>，
+    逻辑更简单，但也就不再走咸宁段了。9 天的内容压进 8 天，砍掉的是汤旺河一天——
+    上一版已经标注过这天有替换选项，是证据支持的最合理砍点。</p>
+    <p><b>租车费和吃饭门票玩乐费都是按天数比例从上一版折算的估算值</b>，
+    没有重新问价或逐项核实，实际下单前建议再确认一次。</p>
+    <p><b>五营木屋这晚仍是预留价</b>，携程搜不到这类景区内住宿，需要电话订，
+    实价可能高于或低于 ¥400。</p>
+    <p><b>返程里程兑换的具体数字是沿用上一版同航班同价的推断</b>，
+    没有专门针对 8/28 这天在南航 APP 上重新核实三人份的兑换情况。</p>
+    <p style="margin-bottom:0"><b>价格含钻石贵宾折扣。</b>
+    这些是用你的账号查到的价，普通用户看到的会略高一点。</p>
+  </div>
+</section>
+
+<footer>
+  <b>小兴安岭林海八日 · 2026年8月21日–28日</b>
+  三人全程同进同出 · 价格数据截止 2026年7月28日<br>
+  实景照片来自携程景点相册与小红书用户实拍 · 已剔除不对题图片<br><br>
+  <a href="index.html" style="color:#8fd4ab;text-decoration:none;font-size:13px">← 查看早期两案比选版（过程记录）</a>
+  &nbsp;·&nbsp;
+  <a href="yichun9.html" style="color:#8fd4ab;text-decoration:none;font-size:13px">分头会合版（9天，过程记录）</a>
+  &nbsp;·&nbsp;
+  <a href="qinhuangdao.html" style="color:#8fd4ab;text-decoration:none;font-size:13px">秦皇岛备选方案</a>
+</footer>
+
+</body>
+</html>
